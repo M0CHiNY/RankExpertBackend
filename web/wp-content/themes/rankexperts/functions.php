@@ -95,6 +95,8 @@ add_action( 'after_setup_theme', 'rankexperts_setup' );
  */
 
 require get_template_directory() . '/inc/scripts.php';
+require get_template_directory() . '/inc/cpt.php';
+
 
 /**
  * Implement header menu
