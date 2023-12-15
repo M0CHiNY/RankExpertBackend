@@ -46,7 +46,7 @@ function rankexperts_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'rankexperts' ),
+			'header-menu' => esc_html__( 'Primary', 'rankexperts' ),
 		)
 	);
 
@@ -89,7 +89,12 @@ add_action( 'after_setup_theme', 'rankexperts_setup' );
 
 
 /**
- * Implement scripts php
+ * Implement scripts
  */
 
 require get_template_directory() . '/inc/scripts.php';
+
+/**
+ * Implement header menu
+ */
+require get_template_directory() . '/inc/headerWalkerMenu.php';

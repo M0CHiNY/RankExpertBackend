@@ -37,6 +37,7 @@ function rankexperts_scripts()
     if (is_404()) {
         wp_enqueue_style('rankexperts-404', get_template_directory_uri() . '/assets/css/404.css', array(), '1.0', 'all');
     }
+    wp_enqueue_style('rankexperts-custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'rankexperts_scripts');
 
