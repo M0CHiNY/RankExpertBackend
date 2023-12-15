@@ -16,7 +16,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Index HTML</title>
     <link rel="icon" href="favicon.ico">
     <?php wp_head(); ?>
 </head>
@@ -61,95 +60,32 @@
                                     </button>
                                 </div>
                                 <nav class="nav">
-                                    <ul class="nav-menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li>
-                                            <a href="#">Online Marketing</a>
-                                            <ul class="nav-submenu" id="level-1">
-                                                <li>
-                                                    <a href="#">Search Engine Advertising (SEA)</a>
-                                                    <ul class="nav-submenu" id="level-2">
-                                                        <li><a href="#">Food & Treats</a></li>
-                                                        <li><a href="#">Toys</a></li>
-                                                        <li><a href="#">Beds & Furniture</a></li>
-                                                        <li><a href="#">Outdoor Supplies</a></li>
-                                                        <li>
-                                                            <a href="#">Clothing</a>
-                                                            <ul class="nav-submenu" id="level-3">
-                                                                <li><a href="#">Sweaters and Hoodies</a></li>
-                                                                <li><a href="#">Raincoats</a></li>
-                                                                <li><a href="#">T-Shirts</a></li>
-                                                                <li><a href="#">Booties</a></li>
-                                                                <li><a href="#">Hats/Caps</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                    <a href="#">Search Engine Optimization (SEO)</a>
-                                                    <ul class="nav-submenu" id="level-2">
-                                                        <li><a href="#">Food & Treats</a></li>
-                                                        <li><a href="#">Toys</a></li>
-                                                        <li><a href="#">Beds & Furniture</a></li>
-                                                        <li><a href="#">Outdoor Supplies</a></li>
-                                                        <li>
-                                                            <a href="#">Clothing</a>
-                                                            <ul class="nav-submenu" id="level-3">
-                                                                <li><a href="#">Sweaters and Hoodies</a></li>
-                                                                <li><a href="#">Raincoats</a></li>
-                                                                <li><a href="#">T-Shirts</a></li>
-                                                                <li><a href="#">Booties</a></li>
-                                                                <li><a href="#">Hats/Caps</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                    <a href="#">Social Media Marketing (SMM)</a>
-                                                    <ul class="nav-submenu" id="level-2">
-                                                        <li><a href="#">Food & Treats</a></li>
-                                                        <li><a href="#">Toys</a></li>
-                                                        <li><a href="#">Beds & Furniture</a></li>
-                                                        <li><a href="#">Outdoor Supplies</a></li>
-                                                        <li>
-                                                            <a href="#">Clothing</a>
-                                                            <ul class="nav-submenu" id="level-3">
-                                                                <li><a href="#">Sweaters and Hoodies</a></li>
-                                                                <li><a href="#">Raincoats</a></li>
-                                                                <li><a href="#">T-Shirts</a></li>
-                                                                <li><a href="#">Booties</a></li>
-                                                                <li><a href="#">Hats/Caps</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-
+                                    <?php
+                                    // display header meny
+                                    
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'header-menu',
+                                        'menu_class' => 'nav-menu',
+                                        'container' => '.nav',
+                                        'depth' => 3,
+                                        'walker' => new Custom_Walker_Nav_Menu()
+                                    ));
+                                    ?>
+                                    <nav class="nav">
+                                        <div class="lang-switcher-mobile">
+                                            <ul class="lang-switcher-mobile__list">
+                                                <li class="lang-switcher-mobile__item current">
+                                                    <a class="lang-switcher-mobile__link " href="">
+                                                        Eng
+                                                    </a>
+                                                </li>
+                                                <li class="lang-switcher-mobile__item ">
+                                                    <a class="lang-switcher-mobile__link" href="">
+                                                        Ger
+                                                    </a>
                                                 </li>
                                             </ul>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">Blog</a>
-
-                                        </li>
-                                        <li>
-                                            <a href="#">Showcases</a>
-
-                                        </li>
-                                        <li>
-                                            <a href="#">Contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <div class="lang-switcher-mobile">
-                                    <ul class="lang-switcher-mobile__list">
-                                        <li class="lang-switcher-mobile__item current">
-                                            <a class="lang-switcher-mobile__link " href="">
-                                                Eng
-                                            </a>
-                                        </li>
-                                        <li class="lang-switcher-mobile__item ">
-                                            <a class="lang-switcher-mobile__link" href="">
-                                                Ger
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        </div>
                             </div>
                         </div>
                         <!-- navigation menu end-->
