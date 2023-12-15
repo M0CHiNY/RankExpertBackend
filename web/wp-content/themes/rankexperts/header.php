@@ -10,17 +10,19 @@
  */
 
 ?>
-<html lang="en">
+<!doctype html>
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Index HTML</title>
     <link rel="icon" href="favicon.ico">
+    <?php wp_head(); ?>
 </head>
 
-<body>
-    Вова привіт!
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div class="container-big">
         <header class="header">
             <div class="container">

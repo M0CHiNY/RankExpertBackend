@@ -89,21 +89,7 @@ add_action( 'after_setup_theme', 'rankexperts_setup' );
 
 
 /**
- * Enqueue scripts and styles.
+ * Implement scripts php
  */
-// function rankexperts_scripts() {
-// 	wp_enqueue_style( 'rankexperts-style', get_stylesheet_uri(), array(), _S_VERSION );
-// 	wp_style_add_data( 'rankexperts-style', 'rtl', 'replace' );
 
-// 	wp_enqueue_script( 'rankexperts-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-// 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-// 		wp_enqueue_script( 'comment-reply' );
-// 	}
-// }
-// add_action( 'wp_enqueue_scripts', 'rankexperts_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-// require get_template_directory() . '/inc/wolker-menu.php';
+require get_template_directory() . '/inc/scripts.php';
