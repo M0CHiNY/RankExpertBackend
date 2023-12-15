@@ -46,7 +46,9 @@ function rankexperts_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'rankexperts' ),
+			'header-menu' => esc_html__( 'Primary', 'rankexperts' ),
+			'footer-menu-left' => esc_html__( 'Footer menu left', 'rankexperts' ),
+			'footer-menu-right' => esc_html__( 'Footer menu right', 'rankexperts' ),
 		)
 	);
 
@@ -89,21 +91,19 @@ add_action( 'after_setup_theme', 'rankexperts_setup' );
 
 
 /**
- * Implement scripts php
+ * Implement scripts
  */
 
 require get_template_directory() . '/inc/scripts.php';
 require get_template_directory() . '/inc/cpt.php';
 
 
-function disable_standard_block()
-{
-  // Перевірте, чи це ваша кастомна сторінка
-  if (is_page('Showcases')) {
-    // Виведіть свій власний контент, або не робіть нічого для відключення стандартного блоку
-  }
-}
+/**
+ * Implement header menu
+ */
+require get_template_directory() . '/inc/headerWalkerMenu.php';
 
-// Додаємо фільтр
-add_filter('the_content', 'disable_standard_block');
-
+/**
+ * Implement footer menu
+ */
+require get_template_directory() . '/inc/footerWalkerMenu.php';
