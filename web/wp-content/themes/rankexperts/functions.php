@@ -93,3 +93,17 @@ add_action( 'after_setup_theme', 'rankexperts_setup' );
  */
 
 require get_template_directory() . '/inc/scripts.php';
+require get_template_directory() . '/inc/cpt.php';
+
+
+function disable_standard_block()
+{
+  // Перевірте, чи це ваша кастомна сторінка
+  if (is_page('Showcases')) {
+    // Виведіть свій власний контент, або не робіть нічого для відключення стандартного блоку
+  }
+}
+
+// Додаємо фільтр
+add_filter('the_content', 'disable_standard_block');
+

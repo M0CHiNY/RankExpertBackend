@@ -26,7 +26,7 @@ function rankexperts_scripts()
         wp_enqueue_script('rankexperts-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper.js', array(), '1.0.0', true);
     }
     // showcase page
-    if (is_page_template('tempalte-showcases.php')) {
+    if (is_page_template('template-showcases.php')) {
         wp_enqueue_style('rankexperts-showcases', get_template_directory_uri() . '/assets/css/showcases.css', array(), '1.0', 'all');
     }
     // contact page
