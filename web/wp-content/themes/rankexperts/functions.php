@@ -47,6 +47,8 @@ function rankexperts_setup() {
 	register_nav_menus(
 		array(
 			'header-menu' => esc_html__( 'Primary', 'rankexperts' ),
+			'footer-menu-left' => esc_html__( 'Footer menu left', 'rankexperts' ),
+			'footer-menu-right' => esc_html__( 'Footer menu right', 'rankexperts' ),
 		)
 	);
 
@@ -98,3 +100,8 @@ require get_template_directory() . '/inc/scripts.php';
  * Implement header menu
  */
 require get_template_directory() . '/inc/headerWalkerMenu.php';
+
+/**
+ * Implement footer menu
+ */
+require get_template_directory() . '/inc/footerWalkerMenu.php';
