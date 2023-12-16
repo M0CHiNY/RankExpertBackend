@@ -73,9 +73,21 @@
     <div class="container">
         <div class="footer__wrap">
             <div class="footer__logo-wrap">
-                <a class="footer__logo" href="#">
-                    <img class="footer__logo-img" src="images/footer-logo.png" alt="logo" />
-                </a>
+                <!-- logo start -->
+                <?php $footer_logo = get_theme_mod('footer_logo');
+                $footer_attachment_id = attachment_url_to_postid($footer_logo);
+                $footer_logo_alt = get_post_meta($footer_attachment_id, '_wp_attachment_image_alt', true);
+                ?>
+
+                <div class="logo-box">
+                    <?php if ($footer_logo): ?>
+                        <a href="<?php echo home_url(); ?>" class="footer__logo">
+                            <img class="footer__logo-img" src="<?php echo esc_url($footer_logo); ?>"
+                                alt="<?php echo esc_attr($footer_logo_alt) ?>">
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <!-- logo end -->
             </div>
             <div class="footer__wrap-menu">
                 <div class="footer__inner-menu">
@@ -91,8 +103,8 @@
                     )); ?>
                     <!-- footer left menu end-->
 
-                   <!-- footer right menu start -->
-                   <?php
+                    <!-- footer right menu start -->
+                    <?php
                     wp_nav_menu(array(
                         'theme_location' => 'footer-menu-right',
                         'menu_class' => 'footer__menu',
@@ -132,7 +144,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer__coppy">Copyright © <?php echo date('Y') ?> Rankexperts</div>
+        <div class="footer__coppy">Copyright ©
+            <?php echo date('Y') ?> Rankexperts
+        </div>
     </div>
 </footer>
 </div>
