@@ -12,7 +12,7 @@ function rankexperts_scripts()
     wp_enqueue_script('rankexperts-scroll', get_template_directory_uri() . '/assets/js/scroll.js', array(), '1.0.0', true);
 
     // home page scritps
-    if (is_front_page()) {
+    if (is_page_template('home.php' )) {
         wp_enqueue_style('rankexperts-swiper-bundle', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '1.0', 'all');
         wp_enqueue_style('rankexperts-home', get_template_directory_uri() . '/assets/css/home-page.css', array(), '1.0', 'all');
         wp_enqueue_script('rankexperts-particles-min', get_template_directory_uri() . '/assets/js/partical/particles.min.js', array(), '1.0.0', true);
