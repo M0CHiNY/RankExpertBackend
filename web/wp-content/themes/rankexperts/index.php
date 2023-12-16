@@ -1026,62 +1026,7 @@ get_header();
                     <div class="swiper-team__wrapper">
                         <div class="swiper team-swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="team-swiper__slide">
-                                        <img class="team-swiper__img" src="images/team/person-1.jpg" alt="" />
-                                        <div class="team-swiper__specialization">SEO Expert 1</div>
-                                        <div class="team-swiper__name">Name: Rico</div>
-                                        <div class="team-swiper__about">
-                                            Description: Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem Ipsum has been
-                                            the industry's standard dummy text ever since the 1500s.
-                                        </div>
-                                        <a class="team-swiper__email"
-                                            href="mailto:justmisha.gmail.com">ijustmisha.gmail.com</a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-swiper__slide">
-                                        <img class="team-swiper__img" src="images/team/person-2.jpg" alt="" />
-                                        <div class="team-swiper__specialization">SEO Expert 2</div>
-                                        <div class="team-swiper__name">Name: Rico</div>
-                                        <div class="team-swiper__about">
-                                            Description: Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem Ipsum has been
-                                            the industry's standard dummy text ever since the 1500s.
-                                        </div>
-                                        <a class="team-swiper__email"
-                                            href="mailto:justmisha.gmail.com">ijustmisha.gmail.com</a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-swiper__slide">
-                                        <img class="team-swiper__img" src="images/team/person-3.png" alt="" />
-                                        <div class="team-swiper__specialization">SEO Expert 3</div>
-                                        <div class="team-swiper__name">Name: Rico</div>
-                                        <div class="team-swiper__about">
-                                            Description: Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem Ipsum has been
-                                            the industry's standard dummy text ever since the 1500s.
-                                        </div>
-                                        <a class="team-swiper__email"
-                                            href="mailto:justmisha.gmail.com">ijustmisha.gmail.com</a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="team-swiper__slide">
-                                        <img class="team-swiper__img" src="images/team/person-2.jpg" alt="" />
-                                        <div class="team-swiper__specialization">SEO Expert 4</div>
-                                        <div class="team-swiper__name">Name: Rico</div>
-                                        <div class="team-swiper__about">
-                                            Description: Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem Ipsum has been
-                                            the industry's standard dummy text ever since the 1500s.
-                                        </div>
-                                        <a class="team-swiper__email"
-                                            href="mailto:justmisha.gmail.com">ijustmisha.gmail.com</a>
-                                    </div>
-                                </div>
+                            <?php get_template_part('template-parts/content-team'); ?>
                             </div>
                         </div>
                         <div class="team-button__inner">

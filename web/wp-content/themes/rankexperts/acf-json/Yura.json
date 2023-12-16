@@ -1,19 +1,19 @@
 [
     {
-        "key": "group_657c3f29d0290",
-        "title": "Showcases",
+        "key": "group_657da223d11f5",
+        "title": "Persons",
         "fields": [
             {
-                "key": "field_657c3f2ac1e6f",
-                "label": "showcases title",
-                "name": "showcases_title",
+                "key": "field_657da2240588f",
+                "label": "Position",
+                "name": "person__position",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "",
+                "instructions": "Entering Job Title or Qualification",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
@@ -24,24 +24,43 @@
                 "append": ""
             },
             {
-                "key": "field_657c3fccc1e70",
-                "label": "Showcases description",
-                "name": "showcases_description",
+                "key": "field_657da35305891",
+                "label": "Email",
+                "name": "person__email",
                 "aria-label": "",
-                "type": "text",
+                "type": "email",
+                "instructions": "Your email contact information",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_657da24705890",
+                "label": "Description",
+                "name": "person__description",
+                "aria-label": "",
+                "type": "textarea",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "75",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
                 "default_value": "",
                 "maxlength": "",
+                "rows": "",
                 "placeholder": "",
-                "prepend": "",
-                "append": ""
+                "new_lines": ""
             }
         ],
         "location": [
@@ -49,7 +68,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "page"
+                    "value": "rersons"
                 }
             ]
         ],
