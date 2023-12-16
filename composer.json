@@ -35,6 +35,7 @@
     "drupal-composer/preserve-paths": "^0.1",
     "johnpbloch/wordpress-core": "~6.0",
     "johnpbloch/wordpress-core-installer": "^2.0",
+    "wpackagist-plugin/copy-delete-posts": "^1.4",
     "wpackagist-plugin/show-current-template": "^0.5.2",
     "wpengine/advanced-custom-fields-pro": "^6.2"
   },
