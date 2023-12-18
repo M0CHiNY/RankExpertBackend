@@ -49,7 +49,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
+<<<<<<< HEAD
                 "width": "",
+=======
+                "width": "50",
+>>>>>>> master
                 "class": "",
                 "id": ""
             },
@@ -69,7 +73,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
+<<<<<<< HEAD
                 "width": "",
+=======
+                "width": "25",
+>>>>>>> master
                 "class": "",
                 "id": ""
             },
@@ -278,6 +286,32 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+<<<<<<< HEAD
+=======
+                    "key": "field_657dac3571685",
+                    "label": "Step num",
+                    "name": "step_num",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_657dac0a71684"
+                },
+                {
+>>>>>>> master
                     "key": "field_657daca471686",
                     "label": "step image",
                     "name": "step_image",
@@ -291,8 +325,13 @@
                         "class": "",
                         "id": ""
                     },
+<<<<<<< HEAD
                     "return_format": "url",
                     "library": "all",
+=======
+                    "return_format": "",
+                    "library": "",
+>>>>>>> master
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -346,6 +385,66 @@
                     "parent_repeater": "field_657dac0a71684"
                 }
             ]
+<<<<<<< HEAD
+=======
+        },
+        {
+            "key": "field_658034b0abfdc",
+            "label": "Team",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65803500df48b",
+            "label": "Title",
+            "name": "team__title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65803559df48c",
+            "label": "Description",
+            "name": "team__description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+>>>>>>> master
         }
     ],
     "location": [
@@ -366,5 +465,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+<<<<<<< HEAD
     "modified": 1702906330
+=======
+    "modified": 1702903367
+>>>>>>> master
 }
