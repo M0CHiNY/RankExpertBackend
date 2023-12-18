@@ -799,6 +799,7 @@
 @media (min-width: 1024px) {
   .search-info__short-text {
     max-width: 51%;
+    margin-right: auto;
   }
 }
 .search-info__title {
