@@ -30,7 +30,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -50,7 +50,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -70,7 +70,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -279,29 +279,6 @@
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_657dac3571685",
-                        "label": "Step num",
-                        "name": "step_num",
-                        "aria-label": "",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "min": "",
-                        "max": "",
-                        "placeholder": "",
-                        "step": "",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_657dac0a71684"
-                    },
-                    {
                         "key": "field_657daca471686",
                         "label": "step image",
                         "name": "step_image",
@@ -315,8 +292,8 @@
                             "class": "",
                             "id": ""
                         },
-                        "return_format": "",
-                        "library": "",
+                        "return_format": "url",
+                        "library": "all",
                         "min_width": "",
                         "min_height": "",
                         "min_size": "",
