@@ -1011,48 +1011,11 @@ get_header();
                 </div>
             </section>
 
-            <section class="team">
-                <div class="team__inner">
-                    <div class="container">
-                        <h2 class="team-title title">Meet Our Team</h2>
-                        <p class="team-text">
-                            Our team consists of seasoned professionals with extensive
-                            expertise in their respective fields. They collaborate closely to
-                            deliver the best solutions and results for you.
-                        </p>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="swiper-team__wrapper">
-                        <div class="swiper team-swiper">
-                            <div class="swiper-wrapper">
-                            <?php get_template_part('template-parts/content-team'); ?>
-                            </div>
-                        </div>
-                        <div class="team-button__inner">
-                            <div class="team-button__prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
-                                    fill="none">
-                                    <rect x="0.5" y="0.5" width="49" height="49" rx="7.5" stroke="#201F1D" />
-                                    <path
-                                        d="M25.6042 18.146L20.2084 23.5418C20.0152 23.7346 19.862 23.9635 19.7575 24.2155C19.6529 24.4675 19.5991 24.7377 19.5991 25.0106C19.5991 25.2834 19.6529 25.5536 19.7575 25.8056C19.862 26.0576 20.0152 26.2866 20.2084 26.4793L25.6042 31.8751C26.9167 33.1876 29.1667 32.2501 29.1667 30.396V19.6043C29.1667 17.7501 26.9167 16.8335 25.6042 18.146Z"
-                                        fill="#E4101A" />
-                                </svg>
-                            </div>
-                            <div class="team-button__next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
-                                    fill="none">
-                                    <rect x="-0.5" y="0.5" width="49" height="49" rx="7.5"
-                                        transform="matrix(-1 0 0 1 49 0)" stroke="#201F1D" />
-                                    <path
-                                        d="M24.3958 18.146L29.7916 23.5418C29.9848 23.7346 30.138 23.9635 30.2425 24.2155C30.3471 24.4675 30.4009 24.7377 30.4009 25.0106C30.4009 25.2834 30.3471 25.5536 30.2425 25.8056C30.138 26.0576 29.9848 26.2866 29.7916 26.4793L24.3958 31.8751C23.0833 33.1876 20.8333 32.2501 20.8333 30.396V19.6043C20.8333 17.7501 23.0833 16.8335 24.3958 18.146Z"
-                                        fill="#E4101A" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+         <!-- section team start -->
+
+            <?php get_template_part('template-parts/home-page/home', 'team'); ?>
+
+         <!-- section team end -->
 
             <section class="faqs">
                 <div class="container">

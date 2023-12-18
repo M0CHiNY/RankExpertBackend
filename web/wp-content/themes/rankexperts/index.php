@@ -1011,7 +1011,7 @@ get_header();
                 </div>
             </section>
 
-            <section class="team">
+            <!-- <section class="team">
                 <div class="team__inner">
                     <div class="container">
                         <h2 class="team-title title">Meet Our Team</h2>
@@ -1052,7 +1052,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="faqs">
                 <div class="container">
