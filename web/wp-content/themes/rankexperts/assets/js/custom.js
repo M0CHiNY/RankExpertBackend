@@ -1,8 +1,9 @@
 const team = document.querySelector(".team");
+const reviews = document.querySelector(".reviews");
 
 // Функція для встановлення висоти елементів
-function setMaxHeight() {
-  const blogItems = document.querySelectorAll(".team-swiper__slide");
+function setMaxHeight(prew) {
+  const blogItems = document.querySelectorAll(prew);
 
   if (blogItems.length > 0) {
     let maxHeight = 0;
@@ -23,5 +24,10 @@ function setMaxHeight() {
 
 if (team) {
   // Викликати функцію при завантаженні сторінки
-  document.addEventListener("DOMContentLoaded", setMaxHeight);
+  document.addEventListener("DOMContentLoaded", setMaxHeight('.team-swiper__slide'));
+}
+
+if (reviews) {
+  // Викликати функцію при завантаженні сторінки
+  document.addEventListener("DOMContentLoaded", setMaxHeight('.reviews__text'));
 }

@@ -99,6 +99,54 @@ function rankexsperts_register_post_type()
   register_post_type('rersons', $args);
 
   //  Persons end
+  //  Reviews start
+
+  unset($labels);
+  unset($args);
+
+  $labels = array(
+    'name' => esc_html_x('Reviews', 'Post type general name', 'rankexsperts'),
+    'singular_name' => esc_html_x('Review', 'Post type singular name', 'rankexsperts'),
+    'menu_name' => esc_html_x('Reviews', 'Admin Menu text', 'rankexsperts'),
+    'name_admin_bar' => esc_html_x('Review', 'Add New on Toolbar', 'rankexsperts'),
+    'add_new' => esc_html__('Add New', 'rankexsperts'),
+    'add_new_item' => esc_html__('Add New Review', 'rankexsperts'),
+    'new_item' => esc_html__('New Review', 'rankexsperts'),
+    'edit_item' => esc_html__('Edit Review', 'rankexsperts'),
+    'view_item' => esc_html__('View Review', 'rankexsperts'),
+    'all_items' => esc_html__('All Reviews', 'rankexsperts'),
+    'search_items' => esc_html__('Search Reviews', 'rankexsperts'),
+    'parent_item_colon' => esc_html__('Parent Reviews:', 'rankexsperts'),
+    'not_found' => esc_html__('No Reviews found.', 'rankexsperts'),
+    'not_found_in_trash' => esc_html__('No Reviews found in Trash.', 'rankexsperts'),
+    'featured_image' => esc_html_x('Review Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'rankexsperts'),
+    'set_featured_image' => esc_html_x('Set review image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'rankexsperts'),
+    'remove_featured_image' => esc_html_x('Remove review image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'rankexsperts'),
+    'use_featured_image' => esc_html_x('Use as review image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'rankexsperts'),
+    'archives' => esc_html_x('Review archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'rankexsperts'),
+    'insert_into_item' => esc_html_x('Insert into Review', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'rankexsperts'),
+    'uploaded_to_this_item' => esc_html_x('Uploaded to this Review', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'rankexsperts'),
+    'filter_items_list' => esc_html_x('Filter Review list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'rankexsperts'),
+    'items_list_navigation' => esc_html_x('Reviews list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'rankexsperts'),
+    'items_list' => esc_html_x('Reviews list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'rankexsperts'),
+  );
+  $args = array(
+    'labels' => $labels,
+    'supports' => array('title'),
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => 'review'),
+    'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+    'show_in_rest' => true,
+    'menu_position' => 5
+  );
+
+  register_post_type('review', $args);
+  //  Reviews end
+
 }
 
 add_action('init', 'rankexsperts_register_post_type');
