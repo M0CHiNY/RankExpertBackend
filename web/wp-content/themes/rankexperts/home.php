@@ -344,154 +344,12 @@ get_header();
 <?php get_template_part('template-parts/home-page/home', 'steps'); ?>
 
 <!-- section steps end -->
+<!-- section reviews start -->
 
+<?php get_template_part('template-parts/home-page/home', 'reviews'); ?>
 
+<!-- section reviews end -->
 
-<section class="reviews">
-  <div class="container">
-    <h2 class="reviews__title title">Our clients trust us</h2>
-    <div class="reviews__wrap">
-      <article class="reviews__card">
-        <div class="reviews__head">
-          <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="Yana Pryhodko" />
-          <div class="reviews__head-box">
-            <h3 class="reviews__name">Yana Pryhodko</h3>
-            <a class="reviews__link" href="#">@yanapryhodko</a>
-            <div class="reviews__stars-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#FFD700" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z" stroke="#201F1D" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="reviews__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article class="reviews__card">
-        <div class="reviews__head">
-          <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="Yana Pryhodko" />
-          <div class="reviews__head-box">
-            <h3 class="reviews__name">Yana Pryhodko</h3>
-            <a class="reviews__link" href="#">@yanapryhodko</a>
-            <div class="reviews__stars-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#FFD700" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z" stroke="#201F1D" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="reviews__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article class="reviews__card">
-        <div class="reviews__head">
-          <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="Yana Pryhodko" />
-          <div class="reviews__head-box">
-            <h3 class="reviews__name">Yana Pryhodko</h3>
-            <a class="reviews__link" href="#">@yanapryhodko</a>
-            <div class="reviews__stars-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#FFD700" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z" stroke="#201F1D" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="reviews__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article class="reviews__card">
-        <div class="reviews__head">
-          <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="Yana Pryhodko" />
-          <div class="reviews__head-box">
-            <h3 class="reviews__name">Yana Pryhodko</h3>
-            <a class="reviews__link" href="#">@yanapryhodko</a>
-            <div class="reviews__stars-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#FFD700" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z" stroke="#201F1D" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="reviews__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article class="reviews__card">
-        <div class="reviews__head">
-          <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="Yana Pryhodko" />
-          <div class="reviews__head-box">
-            <h3 class="reviews__name">Yana Pryhodko</h3>
-            <a class="reviews__link" href="#">@yanapryhodko</a>
-            <div class="reviews__stars-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#FFD700" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z" stroke="#201F1D" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="reviews__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article class="reviews__card">
-        <div class="reviews__head">
-          <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="Yana Pryhodko" />
-          <div class="reviews__head-box">
-            <h3 class="reviews__name">Yana Pryhodko</h3>
-            <a class="reviews__link" href="#">@yanapryhodko</a>
-            <div class="reviews__stars-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="#FFD700" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                <path d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z" stroke="#201F1D" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="reviews__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
 
 <section class="portfolio">
   <div class="container">
@@ -687,7 +545,6 @@ get_header();
 <!-- section faqs start -->
 <?php get_template_part('template-parts/home-page/home', 'faqs'); ?>
 <!-- section faqs end -->
-
 
 
 <?php

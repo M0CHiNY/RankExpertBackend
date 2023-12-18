@@ -5,66 +5,66 @@ $postArgsTeam = [
 ];
 
 $team_query = new WP_Query($postArgsTeam);
+
 ?>
-
-<section class="team">
-    <div class="team__inner">
-        <div class="container">
-            <h2 class="team-title title">
-                <?php echo get_field('team__title', get_the_ID()) ?>
-            </h2>
-            <p class="team-text">
-                <?php echo get_field('team__description', get_the_ID()) ?>
-            </p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="swiper-team__wrapper">
-            <div class="swiper team-swiper">
-                <div class="swiper-wrapper">
-                    <?php
-                    if ($team_query->have_posts()):
-                        while ($team_query->have_posts()):
-                            $team_query->the_post();
-                            $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                            $image_attachment_id = attachment_url_to_postid($image_url);
-                            $image_alt = get_post_meta($image_attachment_id, '_wp_attachment_image_alt', true);
-                            ?>
-
-                            <div class="swiper-slide">
-                                <div class="team-swiper__slide">
-                                    <?php if (!empty($image_url)): ?>
-                                        <img class="team-swiper__img" src="<?php echo $image_url; ?>"
-                                            alt="<?php echo $image_alt; ?>" />
-                                    <?php endif; ?>
-                                    <div class="team-swiper__specialization">
-                                        <?php the_title(); ?>
-                                    </div>
-                                    <div class="team-swiper__name">
-                                        <?php echo get_field('person__position', get_the_ID()) ?>
-                                    </div>
-                                    <div class="team-swiper__about">
-                                        <?php echo get_field('person__description', get_the_ID()) ?>
-                                    </div>
-                                    <?php if (!empty($email = get_field('person__email', get_the_ID()))): ?>
-                                        <a class="team-swiper__email" href="mailto:<?php echo $email; ?>">
-                                            <?php echo $email; ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                            <?php
-                        endwhile;
-                        wp_reset_postdata();
-                    else:
-
-                        echo 'No posts found.';
-                    endif;
-                    ?>
-                </div>
-               
+<?php if (get_field('team__display-block', get_the_ID())): ?>
+    <section class="team">
+        <div class="team__inner">
+            <div class="container">
+                <h2 class="team-title title">
+                    <?php echo get_field('team__title', get_the_ID()) ?>
+                </h2>
+                <p class="team-text">
+                    <?php echo get_field('team__description', get_the_ID()) ?>
+                </p>
             </div>
-            <div class="team-button__inner">
+        </div>
+        <div class="container">
+            <div class="swiper-team__wrapper">
+                <div class="swiper team-swiper">
+                    <div class="swiper-wrapper">
+                        <?php
+                        if ($team_query->have_posts()):
+                            while ($team_query->have_posts()):
+                                $team_query->the_post();
+                                $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                                $image_attachment_id = attachment_url_to_postid($image_url);
+                                $image_alt = get_post_meta($image_attachment_id, '_wp_attachment_image_alt', true);
+                                ?>
+
+                                <div class="swiper-slide">
+                                    <div class="team-swiper__slide">
+                                        <?php if (!empty($image_url)): ?>
+                                            <img class="team-swiper__img" src="<?php echo $image_url; ?>"
+                                                alt="<?php echo $image_alt; ?>" />
+                                        <?php endif; ?>
+                                        <div class="team-swiper__specialization">
+                                            <?php the_title(); ?>
+                                        </div>
+                                        <div class="team-swiper__name">
+                                            <?php echo get_field('person__position', get_the_ID()) ?>
+                                        </div>
+                                        <div class="team-swiper__about">
+                                            <?php echo get_field('person__description', get_the_ID()) ?>
+                                        </div>
+                                        <?php if (!empty($email = get_field('person__email', get_the_ID()))): ?>
+                                            <a class="team-swiper__email" href="mailto:<?php echo $email; ?>">
+                                                <?php echo $email; ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        else:
+
+                            echo 'No posts found.';
+                        endif;
+                        ?>
+                    </div>
+                </div>
+                <div class="team-button__inner">
                     <div class="team-button__prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                             <rect x="0.5" y="0.5" width="49" height="49" rx="7.5" stroke="#201F1D" />
@@ -83,5 +83,6 @@ $team_query = new WP_Query($postArgsTeam);
                         </svg>
                     </div>
                 </div>
-        </div>
-</section>
+            </div>
+    </section>
+<?php endif; ?>

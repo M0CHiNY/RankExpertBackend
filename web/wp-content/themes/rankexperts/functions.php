@@ -80,6 +80,7 @@ add_action('after_setup_theme', 'rankexperts_setup');
 /**
  * Implement scripts
  */
+
 require get_template_directory() . '/inc/scripts.php';
 
 // custom post
@@ -104,4 +105,7 @@ require get_template_directory() . '/inc/footerWalkerMenu.php';
  */
 require get_template_directory() . '/inc/customizer-logos.php';
 
-
+/**
+ * Implement customizer stars
+ */
+require get_template_directory() . '/inc/stars.php';
