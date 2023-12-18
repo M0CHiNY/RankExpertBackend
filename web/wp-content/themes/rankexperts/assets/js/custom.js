@@ -24,10 +24,4 @@ function setMaxHeight() {
 if (team) {
   // Викликати функцію при завантаженні сторінки
   document.addEventListener("DOMContentLoaded", setMaxHeight);
-
-  // Викликати функцію при зміні розміру вікна
-  window.addEventListener("resize", setMaxHeight);
-
-  // Викликати функцію при зміні орієнтації екрану
-  window.addEventListener("orientationchange", setMaxHeight);
 }
