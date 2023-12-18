@@ -21,6 +21,26 @@
                 "endpoint": 0
             },
             {
+                "key": "field_65808023c2c79",
+                "label": "Display block subhead",
+                "name": "subhead_display",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
                 "key": "field_657d878d2b085",
                 "label": "Title",
                 "name": "subhead_title",
@@ -107,7 +127,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -127,7 +147,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -153,6 +173,26 @@
                 },
                 "placement": "top",
                 "endpoint": 0
+            },
+            {
+                "key": "field_65807e55a3267",
+                "label": "Display block optimization info",
+                "name": "optimization_display",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             },
             {
                 "key": "field_657da21e4a64c",
@@ -220,6 +260,103 @@
                 "preview_size": "medium"
             },
             {
+                "key": "field_6580777c3df3b",
+                "label": "Our advantages",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_658078373df3c",
+                "label": "Display block our advantages",
+                "name": "our_advantages_display",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_658078973df3d",
+                "label": "Title",
+                "name": "our_advantages_title",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "To apply the red color, you need to wrap the selected word in a span tag.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "media_upload": 1,
+                "toolbar": "full",
+                "delay": 0
+            },
+            {
+                "key": "field_658078f23df3e",
+                "label": "Descripption",
+                "name": "our_advantages_descr",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "To apply the red color, you need to wrap the selected word in a span tag.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_6580792d3df3f",
+                "label": "Our advantages button name",
+                "name": "our_advantages_btnName",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "To apply the red color, you need to wrap the selected word in a span tag.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
                 "key": "field_657dab3375dd6",
                 "label": "Our steps",
                 "name": "",
@@ -235,6 +372,26 @@
                 },
                 "placement": "top",
                 "endpoint": 0
+            },
+            {
+                "key": "field_65807c5d8949c",
+                "label": "Display block our  steps",
+                "name": "our_steps_display",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             },
             {
                 "key": "field_657dab9475dd7",
@@ -404,6 +561,129 @@
                 "rows": "",
                 "placeholder": "",
                 "new_lines": ""
+            },
+            {
+                "key": "field_658068a872c70",
+                "label": "FAQS",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_658073689c109",
+                "label": "Display block Faqs",
+                "name": "faqs_display",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_658069642d264",
+                "label": "Title",
+                "name": "faqs_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6580698c2d265",
+                "label": "Accordeon",
+                "name": "faqs_acordeon",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Додати рядок",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_658069d32d266",
+                        "label": "Accordion question",
+                        "name": "accordion_question",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_6580698c2d265"
+                    },
+                    {
+                        "key": "field_658069fc2d267",
+                        "label": "Accordion content",
+                        "name": "accordion_content",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "placeholder": "",
+                        "new_lines": "",
+                        "parent_repeater": "field_6580698c2d265"
+                    }
+                ]
             }
         ],
         "location": [

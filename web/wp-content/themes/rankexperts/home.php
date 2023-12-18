@@ -6,28 +6,11 @@
 
 get_header();
 ?>
-<section class="subhead" id="particles-js">
-  <div class="container">
-    <div class="subhead__wrap">
-      <h1 class="subhead__title">
-        <?php echo get_field('subhead_title', get_the_ID(), false); ?>
-      </h1>
-      <p class="subhead__descr">
-        <?php echo wp_kses_post(get_field('subhead_description', get_the_ID())); ?>
-      </p>
-      <div>
-        <?php
-        $subhead_button_name = get_field('subhead_button_name', get_the_ID());
-        if (!empty($subhead_button_name)) :
-        ?>
-          <button class="subhead__btn btn" type="button" data-ui-toggle="my-dialog">
-            <?php echo esc_html($subhead_button_name); ?>
-          </button>
-        <?php endif; ?>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- section subhead start -->
+
+<?php get_template_part('template-parts/home-page/home', 'subhead'); ?>
+
+<!-- section subhead end -->
 
 <section class="marketing" id="down">
   <div class="container">
@@ -344,101 +327,25 @@ get_header();
   </div>
 </section>
 
-<section class="search-info">
-  <div class="container">
-    <div class="search-info__wrap">
-      <div class="search-info__img">
-        <?php $image = get_field('optimization_img');
-        if ($image) :
-          // Image variables.
-          $url = $image['url'];
-          $alt = $image['alt'];
-        ?>
-          <img src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" />
-        <?php endif; ?>
-      </div>
-      <div class="search-info__short-text">
-        <h2 class="search-info__title title">
-          <?php echo get_field('optimization_title', get_the_ID()); ?>
-        </h2>
-        <div class="search-info__descr">
-          <?php echo get_field('optimization_descr', get_the_ID()); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- section searchInfo start -->
 
-<section class="action">
-  <div class="container">
-    <div class="action__inner">
-      <div class="action__items">
-        <div class="action__item">
-          <h2 class="action__item-title">
-            What makes us so <span> different </span> and
-            <span>better</span> than other
-          </h2>
-          <p>
-            Many of our clients were skeptical about SEO until they
-            started working with us. That's because we only make promises
-            that we can keep. Schedule a free consultation to learn more
-            about how our SEO agency can help you achieve your desired
-            results.
-          </p>
-        </div>
-        <div class="action__item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
-            <path d="M78.8175 4.23915C46.4523 4.77381 -6.36378 31.4501 7.47958 136.222C7.47958 74.5007 42.2339 43.753 60.7454 43.753C72.9681 43.753 81.4275 53.9908 82.37 73.8555H70.4778L72.5925 77.8654L106.266 141.816L108.683 146.411L111.109 141.815L144.782 77.866L146.897 73.8558H129.483C128.432 30.6465 105.797 4.46473 80.3468 4.23915C79.8437 4.23417 79.3316 4.23036 78.8175 4.23915ZM77.4722 17.3035C102.537 16.9763 120.296 39.4716 121.033 79.3303H137.824L108.691 134.665L79.5499 79.33H98.7672C98.0869 38.2534 81.1158 20.1972 48.4586 26.5223C58.7594 20.4145 68.5779 17.4198 77.4719 17.3032L77.4722 17.3035Z" fill="#F5F6F0" />
-          </svg>
-          <button class="btn btn-modal" type="button" data-ui-toggle="my-dialog">
-            Book a consultation
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php get_template_part('template-parts/home-page/home', 'searchInfo'); ?>
 
-<section class="ruls">
-  <div class="container">
-    <div class="ruls__wrap">
-      <h2 class="ruls__title title">
-        <?php echo get_field('steps_title'); ?>
-      </h2>
+<!-- section searchInfo end -->
 
-      <ul class="infoGraphic ruls__steps">
-        <?php if ($steps = get_field('our_steps_cards', get_the_ID())) : ?>
-          <?php 
-          $count = 1;
-          foreach ($steps as $step) :
-          ?>
-            <li class="ruls__item">
-              <div class="numberWrap">
-                <div class="number fontColor1 ruls__num"><?php echo $count++; ?></div>
-                <div class="coverWrap">
-                  <div class="numberCover"></div>
-                </div>
-              </div>
-              <div class="ruls__info-box">
-                <div class="ruls__info-box-img">
-                  <img src="<?php echo $step['step_image']; ?>" />      
-                </div>
-                <h5 class="ruls__info-caption">
-                  <?php echo $step['step_title_card']; ?>
-                </h5>
-                <p class="ruls__info-text">
-                  <?php echo  $step['step_description']; ?>
-                </p>
-              </div>
-            </li>
-        <?php
-          endforeach;
-        endif;
-        ?>
-      </ul>
-    </div>
-  </div>
-</section>
+<!-- section action start -->
+
+<?php get_template_part('template-parts/home-page/home', 'action'); ?>
+
+<!-- section action end -->
+
+<!-- section steps start -->
+
+<?php get_template_part('template-parts/home-page/home', 'steps'); ?>
+
+<!-- section steps end -->
+
+
 
 <section class="reviews">
   <div class="container">
@@ -776,62 +683,12 @@ get_header();
 
 <!-- section team end -->
 
-<section class="faqs">
-  <div class="container">
-    <h2 class="faqs__title title">FAQ's</h2>
-    <div data-ui-tablist class="accordion">
-      <div data-ui-tablist-item class="ui-active">
-        <button data-ui-tablist-tab class="accordion-tab ui-active">
-          Question
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-          </svg>
-        </button>
-        <div data-ui-tablist-tabpanel data-ui-transition-name="collapse">
-          <div class="accordion-panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </div>
-        </div>
-      </div>
-      <div data-ui-tablist-item>
-        <button data-ui-tablist-tab class="accordion-tab">
-          Question 2
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-          </svg>
-        </button>
-        <div data-ui-tablist-tabpanel data-ui-transition-name="collapse" hidden>
-          <div class="accordion-panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </div>
-        </div>
-      </div>
-      <div data-ui-tablist-item>
-        <button data-ui-tablist-tab class="accordion-tab">
-          Question 3
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-          </svg>
-        </button>
-        <div data-ui-tablist-tabpanel data-ui-transition-name="collapse" hidden>
-          <div class="accordion-panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </div>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</section>
+<!-- section faqs start -->
+<?php get_template_part('template-parts/home-page/home', 'faqs'); ?>
+<!-- section faqs end -->
+
+
 
 <?php
 get_footer();
