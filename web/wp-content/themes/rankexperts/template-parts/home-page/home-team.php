@@ -4,17 +4,17 @@ $postArgsTeam = [
     'posts_per_page' => -1,
 ];
 
-$team_query = new WP_Query($postArgsTeam );
+$team_query = new WP_Query($postArgsTeam);
 ?>
 
 <section class="team">
     <div class="team__inner">
         <div class="container">
-            <h2 class="team-title title">Meet Our Team</h2>
+            <h2 class="team-title title">
+                <?php echo get_field('team__title', get_the_ID()) ?>
+            </h2>
             <p class="team-text">
-                Our team consists of seasoned professionals with extensive
-                expertise in their respective fields. They collaborate closely to
-                deliver the best solutions and results for you.
+                <?php echo get_field('team__description', get_the_ID()) ?>
             </p>
         </div>
     </div>
@@ -62,7 +62,9 @@ $team_query = new WP_Query($postArgsTeam );
                     endif;
                     ?>
                 </div>
-                <div class="team-button__inner">
+               
+            </div>
+            <div class="team-button__inner">
                     <div class="team-button__prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                             <rect x="0.5" y="0.5" width="49" height="49" rx="7.5" stroke="#201F1D" />
@@ -81,6 +83,5 @@ $team_query = new WP_Query($postArgsTeam );
                         </svg>
                     </div>
                 </div>
-            </div>
         </div>
 </section>
