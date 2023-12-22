@@ -1,3 +1,29 @@
 .team-text {
-    text-align: center;
+  text-align: center;
+}
+.reviews {
+  margin-top: 50px;
+}
+.showcases__descr {
+  margin-bottom: 50px;
+}
+.showcase-item__img {
+  height: calc(130px + (250 - 130) * ((100vw - 375px) / (1920 - 375)));
+}
+.showcases .showcase-item__date{
+  color:#f5f6f0;
+}
+@media (min-width: 1024px) {
+  .reviews {
+    margin-top: 100px;
+  }
+  .showcases__descr {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .showcase-item__img {
+    height: 250px;
+  }
 }
