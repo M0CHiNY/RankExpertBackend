@@ -8,7 +8,7 @@
   margin-bottom: 50px;
 }
 .showcase-item__img {
-  height: calc(130px + (201 - 130) * ((100vw - 375px) / (1920 - 375)));
+  height: calc(130px + (250 - 130) * ((100vw - 375px) / (1920 - 375)));
 }
 .showcases .showcase-item__date{
   color:#f5f6f0;
@@ -24,6 +24,6 @@
 
 @media (min-width: 1920px) {
   .showcase-item__img {
-    height: 201px;
+    height: 250px;
   }
 }
