@@ -26,6 +26,12 @@ function rankexperts_scripts()
         wp_enqueue_style('rankexperts-single-blog', get_template_directory_uri() . '/assets/css/single-blog.css', array(), '1.0', 'all');
         wp_enqueue_script('rankexperts-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper.js', array(), '1.0.0', true);
     }
+    // single page for service
+    if (is_singular('service')) {
+        wp_enqueue_style('rankexperts-single-service', get_template_directory_uri() . '/assets/css/single-service.css', array(), '1.0', 'all');
+        wp_enqueue_script('rankexperts-single-service', get_template_directory_uri() . '/assets/js/single-service.js', array(), '1.0.0', true);
+    }
+
     // showcase page
     if (is_page_template('template-showcases.php')) {
         wp_enqueue_style('rankexperts-showcases', get_template_directory_uri() . '/assets/css/showcases.css', array(), '1.0', 'all');
