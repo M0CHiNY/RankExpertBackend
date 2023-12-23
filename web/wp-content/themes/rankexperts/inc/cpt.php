@@ -187,13 +187,13 @@ function rankexsperts_register_post_type()
     'capability_type'    => 'post',
     'show_in_menu' => true,
     'has_archive' => false,
-    'rewrite' => array('slug' => 'service'),
+    'rewrite' => array('slug' => 'services'),
     'menu_icon' => 'dashicons-clipboard',
     'show_in_rest' => true,
     'menu_position' => 4
   );
 
-  register_post_type('service', $args);
+  register_post_type('services', $args);
   //  Service end
 
 

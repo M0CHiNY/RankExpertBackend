@@ -1,5 +1,362 @@
 [
   {
+    "key": "group_658720270ae4b",
+    "title": "Contacs",
+    "fields": [
+      {
+        "key": "field_6587202777d4c",
+        "label": "Contacs",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_6587223c77d52",
+        "label": "Display block contacs",
+        "name": "contacs__display",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 1,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      },
+      {
+        "key": "field_6587204a77d4d",
+        "label": "Title",
+        "name": "contacts__title",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_658720e477d4e",
+        "label": "Subtitle text",
+        "name": "contacts__subtitle",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6587210277d4f",
+        "label": "Title Сompany phone",
+        "name": "contacts__title-phone",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "Сompany phone:",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6587218d77d50",
+        "label": "Company phone numbers",
+        "name": "contacts__numbers",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "table",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Додати рядок",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_658721e277d51",
+            "label": "Add phone numbers",
+            "name": "contacts__phone",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_6587218d77d50"
+          }
+        ]
+      },
+      {
+        "key": "field_6587228e4c3c8",
+        "label": "Title Сompany email",
+        "name": "contacts__title-email",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "Сompany email:",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_658723164c3c9",
+        "label": "Company email",
+        "name": "contacts__title-email",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "table",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Додати рядок",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_658723164c3ca",
+            "label": "Add email",
+            "name": "contacts__email",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_658723164c3c9"
+          }
+        ]
+      },
+      {
+        "key": "field_658723d64c3cb",
+        "label": "Title Our social media",
+        "name": "contacs__title-social",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_658723f84c3cc",
+        "label": "Our social",
+        "name": "contacs__our-social",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "table",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Додати рядок",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_658724294c3cd",
+            "label": "Add company social",
+            "name": "contacs__social",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "",
+            "parent_repeater": "field_658723f84c3cc"
+          }
+        ]
+      },
+      {
+        "key": "field_65872675d5bd3",
+        "label": "Form contacs",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_65872698d5bd4",
+        "label": "Display block form contacs",
+        "name": "form-contacs__display",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 0,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      },
+      {
+        "key": "field_658726e2d5bd5",
+        "label": "Add do_shortcode for form output",
+        "name": "contacs-form__do_shortcode",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "contacts.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+  },
+  {
     "key": "group_657d873b1491e",
     "title": "Home page",
     "fields": [
@@ -616,8 +973,13 @@
           "class": "",
           "id": ""
         },
-        "post_type": ["showcase", "page"],
-        "post_status": ["publish"],
+        "post_type": [
+          "showcase",
+          "page"
+        ],
+        "post_status": [
+          "publish"
+        ],
         "taxonomy": "",
         "allow_archives": 1,
         "multiple": 0,
@@ -1063,7 +1425,7 @@
   },
   {
     "key": "group_6585798f97356",
-    "title": "Service",
+    "title": "Services",
     "fields": [
       {
         "key": "field_6585799090ca4",
@@ -1251,7 +1613,7 @@
             "label": "service-advantage__text",
             "name": "service-advantage__text",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1262,9 +1624,9 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
             "placeholder": "",
-            "new_lines": "",
+            "prepend": "",
+            "append": "",
             "parent_repeater": "field_65858a203afe9"
           }
         ]
@@ -1450,7 +1812,7 @@
             "label": "Service different other text",
             "name": "service-different__other-text",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1461,9 +1823,9 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
             "placeholder": "",
-            "new_lines": "",
+            "prepend": "",
+            "append": "",
             "parent_repeater": "field_6585ba6641e42"
           }
         ]
@@ -1515,7 +1877,7 @@
             "label": "Service different our text",
             "name": "service-different__our-text",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1526,9 +1888,9 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
             "placeholder": "",
-            "new_lines": "",
+            "prepend": "",
+            "append": "",
             "parent_repeater": "field_6585bb6141e46"
           }
         ]
@@ -1788,7 +2150,7 @@
         "required": 0,
         "conditional_logic": 0,
         "wrapper": {
-          "width": "",
+          "width": "33",
           "class": "",
           "id": ""
         },
@@ -1808,7 +2170,7 @@
         "required": 0,
         "conditional_logic": 0,
         "wrapper": {
-          "width": "",
+          "width": "33",
           "class": "",
           "id": ""
         },
@@ -1828,7 +2190,7 @@
         "required": 0,
         "conditional_logic": 0,
         "wrapper": {
-          "width": "",
+          "width": "34",
           "class": "",
           "id": ""
         },
@@ -1842,6 +2204,263 @@
         "max_size": "",
         "mime_types": "",
         "preview_size": "medium"
+      },
+      {
+        "key": "field_6586c9fffa01b",
+        "label": "Сonsultation block",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_6586ca12fa01c",
+        "label": "Display block consultation",
+        "name": "consultation__display",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 1,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      },
+      {
+        "key": "field_6586ca6afa01d",
+        "label": "Title",
+        "name": "consultation__title",
+        "aria-label": "",
+        "type": "wysiwyg",
+        "instructions": "To apply the red color, you need to wrap the selected word in a span tag.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "tabs": "text",
+        "media_upload": 0,
+        "toolbar": "full",
+        "delay": 0
+      },
+      {
+        "key": "field_6586cb96fa01e",
+        "label": "Description",
+        "name": "consultation__descr",
+        "aria-label": "",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "rows": "",
+        "placeholder": "",
+        "new_lines": ""
+      },
+      {
+        "key": "field_6586cc28fa01f",
+        "label": "Name of the button",
+        "name": "consultation__btn",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6586da8a6221a",
+        "label": "Reviews",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_6586dac66221b",
+        "label": "Display block reviews",
+        "name": "reviews__display",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 1,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      },
+      {
+        "key": "field_6586df55cdee1",
+        "label": "FAQS",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_6586e076227fc",
+        "label": "Display block Faqs",
+        "name": "faqs__display",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 1,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      },
+      {
+        "key": "field_6586df70cdee2",
+        "label": "Title",
+        "name": "faqs__title",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6586df99cdee3",
+        "label": "Add information to FAQS",
+        "name": "faqs__list",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "table",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Додати рядок",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_6586dfeacdee4",
+            "label": "Accordion question",
+            "name": "faqs__question",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_6586df99cdee3"
+          },
+          {
+            "key": "field_6586e04e227fb",
+            "label": "Accordion answer",
+            "name": "faqs__answer",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_6586df99cdee3"
+          }
+        ]
       }
     ],
     "location": [
@@ -1849,7 +2468,7 @@
         {
           "param": "post_type",
           "operator": "==",
-          "value": "service"
+          "value": "services"
         }
       ]
     ],
