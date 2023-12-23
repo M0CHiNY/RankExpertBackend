@@ -27,3 +27,7 @@
     height: 250px;
   }
 }
+
+.reviews.reviews--size {
+  padding-bottom: 0;
+}
