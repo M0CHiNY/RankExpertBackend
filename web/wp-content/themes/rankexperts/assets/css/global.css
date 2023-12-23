@@ -1103,8 +1103,8 @@ p {
   .modal-form__box:first-child {
     margin-right: 6px;
   }
-  .modal-form__box:first-child,
-  .modal-form__box:nth-child(2) {
+  .modal-form__box.modal-form__box--size,
+  .modal-form__box.modal-form__box--size {
     display: inline-block;
     width: 49%;
   }
