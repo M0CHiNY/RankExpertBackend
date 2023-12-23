@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * The template for displaying showcase page
  *
  * @package rankexperts
  */
@@ -29,94 +27,93 @@ get_header();
                     </div>
                 </div>
                 <h1 class="showcase-more__title title">
-                    SEO for Tax Lawyers Company
+                    <?php the_title(); ?>>
                 </h1>
             </div>
         </div>
     </div>
-    <div class="showcase-more__resultbox">
-        <div class="showcase-more__resultbox-item">
-            <div class="showcase-more__resultbox-item block-1">4</div>
-            <div class="showcase-more__resultbox-item block-2">months</div>
+    <?php if ($results = get_field('showcases_overview')): ?>
+        <div class="showcase-more__resultbox">
+            <?php foreach ($results as $result): ?>
+                <div class="showcase-more__resultbox-item">
+                    <div class="showcase-more__resultbox-item block-1">
+                        <?php echo $result['number'] ?? ''; ?>
+                    </div>
+                    <div class="showcase-more__resultbox-item block-2">
+                        <?php echo $result['traffic_growth'] ?? ''; ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <div class="showcase-more__resultbox-item">
-            <div class="showcase-more__resultbox-item block-1">+62.78%</div>
-            <div class="showcase-more__resultbox-item block-2">
-                organic traffic from Google search results
-            </div>
-        </div>
-        <div class="showcase-more__resultbox-item">
-            <div class="showcase-more__resultbox-item block-1">+12%</div>
-            <div class="showcase-more__resultbox-item block-2">
-                completed inquiries
-            </div>
-        </div>
-    </div>
+    <?php endif; ?>
     <div class="showcase-more_top__content">
-        <div class="container">
-            <img src="images/design/1.472de4.jpg" alt="" />
-            <p>
-                Organic traffic before the start of work (August-November 2022)
-                and after 4 months of work by Netrocket SEO specialists
-                (December 2022-March 2023)
-            </p>
-        </div>
+        <?php if ($image = get_field('main_image')): ?>
+            <div class="container">
+                <img src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>" />
+                <?php if (get_field('main_image_description')): ?>
+                    <p>
+                        <?php echo get_field('main_image_description'); ?>
+                    </p>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
     <div class="showcase-more__main">
         <div class="container">
             <div class="showcase-more__steps">
-                <div class="showcase-more__step one--mod">
-                    <div class="showcase-more__step__wrapper">
-                        <div class="showcase-more__step-counter">1</div>
-                        <div class="showcase-more__step-name">The Challenge</div>
-                    </div>
-                    <div class="showcase-more__step-content one">
-                        <div class="showcase-more__aboutcase">
-                            <ul>
-                                <li>Industry: <strong>Legal</strong></li>
-                                <li>Industry: CMS: <b>WordPress</b></li>
-                                <li>Promotion Region:<b>Germany</b></li>
-                            </ul>
-                            <div class="showcase-more__aboutcase-container">
-                                <p>
-                                    Our client is a legal company based in
-                                    Frankfurt-am-Main with branches in several cities in
-                                    Germany, including Berlin, Stuttgart, and Munich. They
-                                    specialize in corporate and tax law.
-                                </p>
-                                <p>
-                                    Our client is a legal company based in
-                                    Frankfurt-am-Main with branches in several cities in
-                                    Germany, including Berlin, Stuttgart, and Munich. They
-                                    specialize in corporate and tax law.
-                                </p>
+                <?php if ($title = get_field('1_step_title')): ?>
+                    <div class="showcase-more__step one--mod">
+                        <div class="showcase-more__step__wrapper">
+                            <div class="showcase-more__step-counter">1</div>
+                            <div class="showcase-more__step-name">
+                                <?php echo $title; ?>
+                            </div>
+                        </div>
+                        <div class="showcase-more__step-content one">
+
+                            <div class="showcase-more__aboutcase">
+                                <?php the_field('1_step_сonfiguration'); ?>
+                                <div class="showcase-more__aboutcase-container">
+                                    <?php the_field('1_step_сonfiguration_description'); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="showcase-more__step">
-                    <div class="showcase-more__step__wrapper">
-                        <div class="showcase-more__step-counter">2</div>
-                        <div class="showcase-more__step-name">The Challenge</div>
-                    </div>
-                    <div class="showcase-more__step-content one">
-                        <div class="showcase-more__aboutcase">
-                            <div class="showcase-more__aboutcasebox"></div>
-                            <p>
-                                Our client is a legal company based in Frankfurt-am-Main
-                                with branches in several cities in Germany, including
-                                Berlin, Stuttgart, and Munich. They specialize in
-                                corporate and tax law.
-                            </p>
-                            <p>
-                                Our client is a legal company based in Frankfurt-am-Main
-                                with branches in several cities in Germany, including
-                                Berlin, Stuttgart, and Munich. They specialize in
-                                corporate and tax law.
-                            </p>
+                <?php endif; ?>
+                <?php $count = (empty(get_field('1_step_title')) == null || empty(get_field('1_step_сonfiguration')) == null) ? 1 : 0; ?>
+                <?php if ($steps = get_field('next__step')): ?>
+                    <?php foreach ($steps as $step):
+                        $count++ ?>
+
+                        <div class="showcase-more__step">
+                            <div class="showcase-more__step__wrapper">
+                                <div class="showcase-more__step-counter">
+                                    <?php echo $count; ?>
+                                </div>
+                                <div class="showcase-more__step-name">
+                                    <?php echo $step['title'] ?>
+                                </div>
+                            </div>
+                            <?php if ($step['showcase__subtitle']): ?>
+                                <div class="showcase__subtitle">
+                                    <?php echo $step['showcase__subtitle']; ?>
+                                </div>
+                            <?php endif; ?>
+                            <div class="showcase-more__step-content one ">
+                                <div
+                                    class="showcase-more__aboutcase <?php echo (count($step['content']) == 2) ? 'column' : '' ?>">
+                                    <?php foreach ($step['content'] as $content):
+                                        $conutContent++;
+                                        ?>
+                                        <div class="showcase-more__aboutcasebox">
+                                            <?php echo $content['content'] ?? ''; ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -151,7 +148,9 @@ get_header();
 </div>
 <section class="showcases">
     <div class="container">
-        <h2 class="showcases__title title">Explore more case studies</h2>
+        <h1 class="showcases__title title">
+            <?php the_title(); ?>
+        </h1>
         <div class="showcases__description">
             <p>
                 After four months of working on the website, the tax law SEO
