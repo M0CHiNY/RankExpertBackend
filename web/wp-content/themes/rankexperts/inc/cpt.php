@@ -40,13 +40,13 @@ function rankexsperts_register_post_type()
     'show_ui' => true,
     'show_in_menu' => true,
     'has_archive' => true,
-    'rewrite' => array('slug' => 'Showcase'),
+    'rewrite' => array('slug' => 'Showcases'),
     'menu_icon' => 'dashicons-awards',
     'show_in_rest' => true,
     'menu_position' => 3
   );
 
-  register_post_type('showcase', $args);
+  register_post_type('showcases', $args);
 
   //  Showcases end
 

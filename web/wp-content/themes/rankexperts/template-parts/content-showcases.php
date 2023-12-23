@@ -1,7 +1,7 @@
 <?php
 $countPost = is_home() || is_page_template('home.php') ? '4' : '6';
 $postArgs = [
-    'post_type' => 'showcase',
+    'post_type' => 'showcases',
     'posts_per_page' => $countPost,
 ];
 
