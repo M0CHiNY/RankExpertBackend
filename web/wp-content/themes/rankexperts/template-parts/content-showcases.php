@@ -10,7 +10,7 @@ $custom_query = new WP_Query($postArgs);
 if ($custom_query->have_posts()):
     while ($custom_query->have_posts()):
         $custom_query->the_post(); ?>
-        <?php echo is_home() || is_page_template('home.php') ? '<div class="swiper-slide">' : ''; ?>
+        <?php echo is_page_template('template-showcases.php') ? '' : '<div class="swiper-slide">'; ?>
         <div class="showcase-item" <?php post_class(); ?> id="post-<?php the_ID(); ?>" data-post-id="<?php the_ID(); ?>">
             <?php
             // Check if the post has a featured image
@@ -42,7 +42,7 @@ if ($custom_query->have_posts()):
                 </a>
             </div>
         </div>
-        <?php echo is_home() || is_page_template('home.php') ? '</div>' : ''; ?>
+        <?php echo is_page_template('template-showcases.php') ? '' : '</div>'; ?>
     <?php endwhile;
     wp_reset_postdata();
 else:
