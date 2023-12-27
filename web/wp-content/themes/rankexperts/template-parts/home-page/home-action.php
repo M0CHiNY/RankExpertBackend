@@ -1,6 +1,6 @@
 <?php if(get_field('our_advantages_display', get_the_ID())): ?>
 <?php if(get_field('our_advantages_title', get_the_ID()) || get_field('our_advantages_descr', get_the_ID())): ?>
-<section class="action">
+  <section class="action">
   <div class="container">
     <div class="action__inner">
       <div class="action__items">
