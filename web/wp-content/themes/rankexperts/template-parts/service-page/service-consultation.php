@@ -1,4 +1,7 @@
-<?php if (get_field('consultation__display', get_the_ID())) : ?>
+<?php 
+  if (get_field('consultation__display', get_the_ID())) :
+  if (get_field('consultation__title', get_the_ID()) || get_field('consultation__descr', get_the_ID())) :
+?>
   <section class="action">
     <div class="container">
       <div class="action__inner">
@@ -23,4 +26,7 @@
       </div>
     </div>
   </section>
-<?php endif; ?>
+<?php 
+endif; 
+endif; 
+?>

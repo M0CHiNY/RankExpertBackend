@@ -3,7 +3,7 @@
     <div class="container">
       <div class="service-subhead__wrap">
         <div class="service-subhead__box">
-          <h2 class="service-subhead__title title"><span>seo</span> for e-commerce</h2>
+          <h2 class="service-subhead__title title"><?php the_title(); ?></h2>
           <p class="service-subhead__text">
             <?php echo get_field('subhead__descroption', get_the_ID()); ?>
           </p>
