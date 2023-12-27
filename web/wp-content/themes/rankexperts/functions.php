@@ -109,6 +109,10 @@ require get_template_directory() . '/inc/customizer-logos.php';
  * Implement customizer stars
  */
 require get_template_directory() . '/inc/stars.php';
+/**
+ * Implement сustom categories
+ */
+require get_template_directory() . '/inc/сustom-categories.php';
 
 // br for contact form 7
 add_filter('wpcf7_autop_or_not', '__return_false');

@@ -1,5 +1,6 @@
 const team = document.querySelector(".team");
 const reviews = document.querySelector(".reviews");
+const services = document.querySelector(".marketing");
 
 // Функція для встановлення висоти елементів
 function setMaxHeight(prew) {
@@ -31,3 +32,10 @@ if (reviews) {
   // Викликати функцію при завантаженні сторінки
   document.addEventListener("DOMContentLoaded", setMaxHeight('.reviews__text'));
 }
+
+if (services) {
+  // Викликати функцію при завантаженні сторінки
+  document.addEventListener("DOMContentLoaded", setMaxHeight('.card-item'));
+}
+
+
