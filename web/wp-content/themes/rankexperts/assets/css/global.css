@@ -1039,6 +1039,7 @@ p {
   transition-property: background-color, color, filter, -webkit-filter;
 }
 .btn--close {
+  position: relative;
   aspect-ratio: 1/1;
   border-radius: 8px;
   color: #111826;
@@ -1047,7 +1048,10 @@ p {
   right: 16px;
   top: 10px;
   width: 1.75rem;
+  cursor: pointer;
+  z-index: 3;
 }
+
 @media (min-width: 767px) {
   .btn--close {
     width: 40px;
@@ -1082,27 +1086,48 @@ p {
 .modal-form {
   min-width: 100%;
 }
+
+.modal-form__for-con7 {
+  position: relative;
+  min-width: 100%;
+}
+
 @media (min-width: 1200px) {
   .modal-form {
-    min-width:55%;
+    min-width: 55%;
+  }
+
+  .modal-form__for-con7 {
+    min-width: 55%;
   }
 }
 .modal-form__box {
   display: block;
   margin-bottom: 3px;
 }
-.modal-form__box:first-child {
+
+.modal-form__box.modal-form__box--size.modal-form__box--first {
   margin-top: 25px;
 }
+
 @media (min-width: 1024px) {
-  .modal-form__box:first-child {
+  .modal-form__box.modal-form__box--size {
+    margin-top: 0;
+  }
+
+  .modal-form__box.modal-form__box--size.modal-form__box--first {
     margin-top: 40px;
   }
 }
 @media (min-width: 1200px) {
-  .modal-form__box:first-child {
-    margin-right: 6px;
+  .modal-form__box.modal-form__box--size.modal-form__box--first {
+    margin-right: 5px;
   }
+
+  /* .modal-form__box:first-child {
+    margin-right: 6px;
+  } */
+
   .modal-form__box.modal-form__box--size,
   .modal-form__box.modal-form__box--size {
     display: inline-block;

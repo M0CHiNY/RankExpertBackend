@@ -111,16 +111,6 @@
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  .contact__link--tg:hover svg path {
-    fill: #2bacef;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  .contact__link--tw:hover svg path {
-    fill: #44eb62;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
 }
 .contact__email-box {
   margin-bottom: 15px;
