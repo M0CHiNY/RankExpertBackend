@@ -7,29 +7,46 @@
         </h2>
         <div data-ui-tablist class="accordion">
           <?php
+          $countTab = 1;
           if (have_rows('faqs_acordeon')):
-            $countTab = 0;
             while (have_rows('faqs_acordeon')):
               the_row();
               if (!empty(get_sub_field('accordion_question')) && !empty(get_sub_field('accordion_content'))):
-                $countTab++;
                 ?>
-                <div data-ui-tablist-item class="<?php echo $countTab == 1 ? 'ui-active': '';?>">
-                  <button data-ui-tablist-tab class="accordion-tab <?php echo $countTab == 1 ? 'ui-active': '';?>">
-                    <?php echo get_sub_field('accordion_question', get_the_ID()); ?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5"
-                      stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                    </svg>
-                  </button>
-                  <div data-ui-tablist-tabpanel data-ui-transition-name="collapse" class="<?php echo $countTab == 1 ? 'ui-active': '';?>">
-                    <div class="accordion-panel">
-                      <?php echo get_sub_field('accordion_content', get_the_ID()); ?>
+                <?php if ($countTab === 1): ?>
+                  <div data-ui-tablist-item class="ui-active">
+                    <button data-ui-tablist-tab class="accordion-tab ui-active">
+                      <?php echo get_sub_field('accordion_question', get_the_ID()); ?>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                      </svg>
+                    </button>
+                    <div data-ui-tablist-tabpanel data-ui-transition-name="collapse">
+                      <div class="accordion-panel">
+                        <?php echo get_sub_field('accordion_content', get_the_ID()); ?>
+                      </div>
                     </div>
                   </div>
-                </div>
+                <?php else: ?>
+                  <div data-ui-tablist-item>
+                    <button data-ui-tablist-tab class="accordion-tab">
+                      <?php echo get_sub_field('accordion_question', get_the_ID()); ?>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                      </svg>
+                    </button>
+                    <div data-ui-tablist-tabpanel data-ui-transition-name="collapse" hidden>
+                      <div class="accordion-panel">
+                        <?php echo get_sub_field('accordion_content', get_the_ID()); ?>
+                      </div>
+                    </div>
+                  </div>
+                <?php endif; ?>
                 <?php
               endif;
+              ++$countTab;
             endwhile;
           endif;
           ?>
