@@ -1,4 +1,6 @@
-<?php if (get_field('service-steps__display', get_the_ID())) : ?>
+<?php if (get_field('service-steps__display', get_the_ID())) :
+  if (get_field('service-steps__title', get_the_ID()) || get_sub_field('service_steps__caption', get_the_ID()) || get_sub_field('service_steps__descr', get_the_ID())) :
+?>
   <section class="service-steps">
     <div class="container">
       <h2 class="service-steps__title title">
@@ -26,4 +28,7 @@
       </div>
     </div>
   </section>
-<?php endif; ?>
+<?php 
+  endif;
+  endif;
+?>

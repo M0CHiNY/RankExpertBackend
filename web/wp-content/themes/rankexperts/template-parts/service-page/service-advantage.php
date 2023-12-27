@@ -1,4 +1,7 @@
-<?php if (get_field('service-advantage__display', get_the_ID())) : ?>
+<?php 
+  if (get_field('service-advantage__display', get_the_ID())) : 
+  if (get_field('service-advantage__title', get_the_ID()) || get_sub_field('service-advantage__text', get_the_ID())) : 
+?>
   <section class="service-advantage">
     <div class="container">
       <h2 class="service-advantage__title title"><?php echo get_field('service-advantage__title', get_the_ID()); ?></h2>
@@ -15,4 +18,7 @@
       </ul>
     </div>
   </section>
-<?php endif; ?>
+<?php 
+endif; 
+endif; 
+?>

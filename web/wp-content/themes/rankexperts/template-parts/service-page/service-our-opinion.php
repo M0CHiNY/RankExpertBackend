@@ -1,4 +1,6 @@
-<?php if (get_field('our-opinion__display', get_the_ID())) : ?>
+<?php if (get_field('our-opinion__display', get_the_ID())) :
+  if (get_field('our-opinion__title', get_the_ID()) || get_sub_field('our-opinion__descr', get_the_ID()) || get_sub_field('our-opinion__author', get_the_ID())) :
+  ?>
   <section class="our-opinion">
     <div class="container">
       <h2 class="our-opinion__title title"><?php echo get_field('our-opinion__title', get_the_ID()); ?></h2>
@@ -34,4 +36,7 @@
       </div>
     </div>
   </section>
-<?php endif; ?>
+<?php 
+endif; 
+endif; 
+?>
