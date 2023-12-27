@@ -75,3 +75,8 @@
 .reviews.reviews--size {
   padding-bottom: 0;
 }
+
+.wpcf7-response-output {
+  color: #fff;
+  margin-top: 0 !important;
+}
