@@ -33,7 +33,7 @@
 .showcase-more__aboutcasebox figure {
   width: auto !important;
 }
-.showcase-more__aboutcasebox .wp-caption-text{
+.showcase-more__aboutcasebox .wp-caption-text {
   text-align: center;
   font-style: italic;
 }
@@ -41,7 +41,7 @@
   font-weight: 500;
   font-size: calc(20px + (24 - 20) * ((100vw - 375px) / (1920 - 375)));
 }
-.showcase__subtitle{
+.showcase__subtitle {
   padding-left: calc(44.2233px + 4.20712vw);
   margin-bottom: 15px;
   max-width: 737px;
@@ -79,4 +79,33 @@
 .wpcf7-response-output {
   color: #fff;
   margin-top: 0 !important;
+}
+.pagination .page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.pagination .page-numbers.current > .pagination__item{
+  background-color: #b81f26;
+  color: white;
+}
+.pagination .pagination__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.page-numbers:hover > svg > path {
+  fill: #b81f26;
+}
+
+.blog-article__title a,
+.blog-article__item-title a {
+  color:#201F1D;
+}
+.blog-article__title a:hover,
+.blog-article__item-title a:hover {
+  color: blue;
 }

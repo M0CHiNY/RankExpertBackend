@@ -17,13 +17,11 @@ get_header();
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 4,     // Тип поста (стандартний пост)
-    'paged' => $paged,     // Кількість постів для виведення
+    'posts_per_page' => 4,     
+    'paged' => $paged,  
 );
 
-$query = new WP_Query($args);
-
-?>
+$query = new WP_Query($args);?>
 
 <div class="bread-crumb">
     <div class="container">
@@ -48,19 +46,21 @@ $query = new WP_Query($args);
                     <?php if ($count === 1): ?>
                         <article class="blog-article">
                             <?php
-                            if (has_post_thumbnail()) {
+                            if (has_post_thumbnail()):
+                                $thumbnail_id = get_post_thumbnail_id(get_the_ID());
+                                $srcset = wp_get_attachment_image_srcset($thumbnail_id, 'large');
                                 ?>
                                 <picture class="blog-article__img">
-                                    <?php
-                                    $thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                                    $srcset = wp_get_attachment_image_srcset($thumbnail_id, 'large');
-                                    ?>
                                     <source media="(min-width:767px)" srcset="<?php echo esc_attr($srcset); ?>" />
                                     <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="<?php the_title_attribute(); ?>" />
                                 </picture>
-                                <?php
-                            }
-                            ?>
+                            <?php else: ?>
+                                <picture class="blog-article__img">
+                                    <source media="(min-width:767px)" srcset="<?php echo esc_attr($srcset); ?>" />
+                                    <img src="<?php echo get_template_directory_uri() . '/images-custom/no-image-showcase.webp'; ?>"
+                                        alt="<?php the_title_attribute(); ?>" />
+                                </picture>
+                            <?php endif; ?>
                             <div class="blog-article__box">
                                 <div class="blog-article__athor">
                                     <?php the_author(); ?> |
@@ -74,21 +74,16 @@ $query = new WP_Query($args);
                                 </a></h1>
                             <div class="blog-article__summary">
                                 <?php
-                                // Виводимо анонс, якщо є, інакше виводимо скорочений вміст
                                 if (has_excerpt()) {
                                     the_excerpt();
                                 } else {
-                                    // Виводимо скорочений вміст з маркером "..."
                                     echo wp_trim_words(get_the_content(), 30, '...');
                                 }
                                 ?>
                             </div>
                             <ul class="list-tags">
                                 <?php
-                                // Отримуємо масив термінів з категорії "tag"
                                 $tags = get_the_terms(get_the_ID(), 'post_tag');
-
-                                // Виводимо терміни у вигляді посилань
                                 if ($tags) {
                                     foreach ($tags as $tag) {
                                         echo '<li class="tag">' . $tag->name . '</li>';
@@ -107,7 +102,7 @@ $query = new WP_Query($args);
                 echo 'Постів не знайдено.';
             endif;
 
-            wp_reset_postdata();  // Скидає дані запиту поста
+            wp_reset_postdata();
             ?>
             <!-- last article end -->
             <div class="blog-items">
@@ -120,10 +115,13 @@ $query = new WP_Query($args);
                                 <div class="blog-article__items">
                                     <div class="blog-article__item">
                                         <?php
-                                        if (has_post_thumbnail()):
-                                            ?>
+                                        if (has_post_thumbnail()): ?>
                                             <img class="blog-article__left-img"
                                                 src="<?php the_post_thumbnail_url('medium_large'); ?>"
+                                                alt="<?php the_title_attribute(); ?>" />
+                                        <?php else: ?>
+                                            <img class="blog-article__left-img"
+                                                src="<?php echo get_template_directory_uri() . '/images-custom/no-image-showcase.webp'; ?>"
                                                 alt="<?php the_title_attribute(); ?>" />
                                         <?php endif; ?>
                                     </div>
@@ -134,7 +132,7 @@ $query = new WP_Query($args);
                                             </div>
                                             <span>|</span>
                                             <div class="blog-article__date">
-                                              <?php echo get_the_date('d M Y'); ?>
+                                                <?php echo get_the_date('d M Y'); ?>
                                             </div>
                                         </div>
                                         <h2 class="blog-article__item-title"><a href="<?php the_permalink(); ?>">
@@ -142,21 +140,16 @@ $query = new WP_Query($args);
                                             </a></h2>
                                         <div class="blog-article__item-summary">
                                             <?php
-                                            // Виводимо анонс, якщо є, інакше виводимо скорочений вміст
                                             if (has_excerpt()) {
                                                 the_excerpt();
                                             } else {
-                                                // Виводимо скорочений вміст з маркером "..."
                                                 echo wp_trim_words(get_the_content(), 20, '...');
                                             }
                                             ?>
                                         </div>
                                         <ul class="list-tags">
                                             <?php
-                                            // Отримуємо масив термінів з категорії "tag"
                                             $tags = get_the_terms(get_the_ID(), 'post_tag');
-
-                                            // Виводимо терміни у вигляді посилань
                                             if ($tags) {
                                                 foreach ($tags as $tag) {
                                                     echo '<li class="tag">' . $tag->name . '</li>';
@@ -175,7 +168,7 @@ $query = new WP_Query($args);
                     echo 'Постів не знайдено.';
                 endif;
 
-                wp_reset_postdata();  // Скидає дані запиту поста
+                wp_reset_postdata(); 
                 ?>
             </div>
         </div>
@@ -183,34 +176,29 @@ $query = new WP_Query($args);
 
     <div class="pagination">
         <div class="container">
-            <?php
-            $pagination_args = array(
-                'prev_text' => '<li class="pagination__item-prev"><a href="#" class="pagination__item-prev-link"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.6042 18.1459L20.2084 23.5417C20.0152 23.7344 19.862 23.9634 19.7575 24.2154C19.6529 24.4674 19.5991 24.7376 19.5991 25.0104C19.5991 25.2833 19.6529 25.5535 19.7575 25.8055C19.862 26.0575 20.0152 26.2865 20.2084 26.4792L25.6042 31.875C26.9167 33.1875 29.1667 32.25 29.1667 30.3959V19.6042C29.1667 17.75 26.9167 16.8334 25.6042 18.1459Z" fill="#201F1D" /></svg></a></li>',
-                'next_text' => '<li class="pagination__item-next"><a href="#" class="pagination__item-prev-next"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.3958 18.1459L29.7916 23.5417C29.9848 23.7344 30.138 23.9634 30.2425 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2425 25.8055C30.138 26.0575 29.9848 26.2865 29.7916 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D" /></svg></a></li>',
-            );
-            echo paginate_links(array(
-                'total' => $query->max_num_pages,
-                'current' => max(1, get_query_var('paged')),
-                'format' => '?paged=%#%',
-                'show_all' => false,
-                'end_size' => 1,
-                'mid_size' => 2,
-                'prev_next' => true,
-                'prev_text' => __('<svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16" fill="none">
-        <path d="M6.60415 1.14586L1.20832 6.54169C1.01519 6.73443 0.861962 6.96336 0.757418 7.21539C0.652873 7.46742 0.59906 7.73759 0.59906 8.01044C0.59906 8.28329 0.652873 8.55346 0.757418 8.80549C0.861962 9.05752 1.01519 9.28646 1.20832 9.47919L6.60415 14.875C7.91665 16.1875 10.1667 15.25 10.1667 13.3959V2.60419C10.1667 0.750025 7.91665 -0.166641 6.60415 1.14586Z" fill="#201F1D"/>
-        </svg>'),
-                'next_text' => __('<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                    <path d="M24.3958 18.1459L29.7917 23.5417C29.9848 23.7344 30.138 23.9634 30.2426 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2426 25.8055C30.138 26.0575 29.9848 26.2865 29.7917 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D"/>
-                    </svg>'),
-                'type' => 'list',
-                'add_args' => false,
-                'add_fragment' => '',
-                'before_page_number' => '<li class="pagination__item">',
-                'after_page_number' => '</li>',
-            ));
-            ?>
+            <div class="pagination__items">
+                <?php
+                echo paginate_links(array(
+                    'total' => $query->max_num_pages,
+                    'current' => max(1, get_query_var('paged')),
+                    'format' => '?paged=%#%',
+                    'show_all' => false,
+                    'end_size' => 1,
+                    'mid_size' => 2,
+                    'prev_next' => true,
+                    'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16" fill="none"><path d="M6.60415 1.14586L1.20832 6.54169C1.01519 6.73443 0.861962 6.96336 0.757418 7.21539C0.652873 7.46742 0.59906 7.73759 0.59906 8.01044C0.59906 8.28329 0.652873 8.55346 0.757418 8.80549C0.861962 9.05752 1.01519 9.28646 1.20832 9.47919L6.60415 14.875C7.91665 16.1875 10.1667 15.25 10.1667 13.3959V2.60419C10.1667 0.750025 7.91665 -0.166641 6.60415 1.14586Z" fill="#201F1D"></path></svg>',
+                    'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M24.3958 18.1459L29.7917 23.5417C29.9848 23.7344 30.138 23.9634 30.2426 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2426 25.8055C30.138 26.0575 29.9848 26.2865 29.7917 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D"></path></svg>',
+                    'add_args' => false,
+                    'add_fragment' => '',
+                    'before_page_number' => '<div class="pagination__item">',
+                    'after_page_number' => '</div>',
+                ));
+
+                ?>
+            </div>
         </div>
     </div>
+    <?php the_posts_pagination(); ?>
 </section>
 <?php
 get_footer();
