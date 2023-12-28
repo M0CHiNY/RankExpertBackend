@@ -109,3 +109,6 @@
 .blog-article__item-title a:hover {
   color: blue;
 }
+.pagination.showcase{
+  grid-column: span 2;
+}
