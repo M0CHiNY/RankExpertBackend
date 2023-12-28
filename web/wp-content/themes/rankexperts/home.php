@@ -49,6 +49,5 @@ get_header();
 <?php get_template_part('template-parts/home-page/home', 'faqs'); ?>
 <!-- section with faqs end -->
 
-
 <?php
 get_footer();
