@@ -89,7 +89,6 @@ require get_template_directory() . '/inc/cpt.php';
 // add svg script
 require get_template_directory() . '/inc/scriptSvg.php';
 
-
 /**
  * Implement header menu
  */
