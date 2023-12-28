@@ -17,11 +17,11 @@ get_header();
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 4,     
-    'paged' => $paged,  
+    'posts_per_page' => 4,
+    'paged' => $paged,
 );
 
-$query = new WP_Query($args);?>
+$query = new WP_Query($args); ?>
 
 <div class="bread-crumb">
     <div class="container">
@@ -168,7 +168,7 @@ $query = new WP_Query($args);?>
                     echo 'Постів не знайдено.';
                 endif;
 
-                wp_reset_postdata(); 
+                wp_reset_postdata();
                 ?>
             </div>
         </div>
@@ -186,7 +186,7 @@ $query = new WP_Query($args);?>
                     'end_size' => 1,
                     'mid_size' => 2,
                     'prev_next' => true,
-                    'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16" fill="none"><path d="M6.60415 1.14586L1.20832 6.54169C1.01519 6.73443 0.861962 6.96336 0.757418 7.21539C0.652873 7.46742 0.59906 7.73759 0.59906 8.01044C0.59906 8.28329 0.652873 8.55346 0.757418 8.80549C0.861962 9.05752 1.01519 9.28646 1.20832 9.47919L6.60415 14.875C7.91665 16.1875 10.1667 15.25 10.1667 13.3959V2.60419C10.1667 0.750025 7.91665 -0.166641 6.60415 1.14586Z" fill="#201F1D"></path></svg>',
+                    'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M25.6042 18.1459L20.2083 23.5417C20.0152 23.7344 19.862 23.9634 19.7574 24.2154C19.6529 24.4674 19.5991 24.7376 19.5991 25.0104C19.5991 25.2833 19.6529 25.5535 19.7574 25.8055C19.862 26.0575 20.0152 26.2865 20.2083 26.4792L25.6042 31.875C26.9167 33.1875 29.1667 32.25 29.1667 30.3959V19.6042C29.1667 17.75 26.9167 16.8334 25.6042 18.1459Z" fill="#201F1D"/></svg>',
                     'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M24.3958 18.1459L29.7917 23.5417C29.9848 23.7344 30.138 23.9634 30.2426 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2426 25.8055C30.138 26.0575 29.9848 26.2865 29.7917 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D"></path></svg>',
                     'add_args' => false,
                     'add_fragment' => '',
@@ -198,7 +198,7 @@ $query = new WP_Query($args);?>
             </div>
         </div>
     </div>
-    <?php the_posts_pagination(); ?>
+
 </section>
 <?php
 get_footer();
