@@ -1,4 +1,7 @@
-<?php if (get_field('our-phones__display', 'options')) : ?>
+<?php 
+  if (get_field('our-phones__display', 'options')) : 
+  if (get_field('contacts__title-phone', 'option')) : 
+?>
   <div class="contact__phone-box">
     <h4 class="contact__caption">
       <?php echo get_field('contacts__title-phone', 'option'); ?>
@@ -19,4 +22,7 @@
       ?>
     </ul>
   </div>
-<?php endif; ?>
+<?php 
+  endif; 
+  endif; 
+?>
