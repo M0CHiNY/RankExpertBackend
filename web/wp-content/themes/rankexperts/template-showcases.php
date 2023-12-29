@@ -6,7 +6,6 @@
 
 get_header();
 ?>
-
 <section class="showcases">
   <div class="container">
     <h1 class="showcases__title title">
@@ -21,8 +20,6 @@ get_header();
     </div>
     <!-- showcase__tempalte end-->
   </div>
-
-
 </section>
 
 <?php
