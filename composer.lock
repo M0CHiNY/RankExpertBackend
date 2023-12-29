@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "979e19f1c157c6d4fd8bb85e4b7c6c74",
+    "content-hash": "3cf9bbddf2598635d6d538c8a0fa8578",
     "packages": [
         {
             "name": "composer/installers",
@@ -388,6 +388,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/show-current-template/"
+        },
+        {
+            "name": "wpackagist-plugin/ultimate-social-media-icons",
+            "version": "2.8.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ultimate-social-media-icons/",
+                "reference": "tags/2.8.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ultimate-social-media-icons.2.8.6.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ultimate-social-media-icons/"
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",

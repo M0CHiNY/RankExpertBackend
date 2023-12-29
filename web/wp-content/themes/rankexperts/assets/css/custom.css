@@ -112,3 +112,7 @@
 .pagination.showcase{
   grid-column: span 2;
 }
+
+.sfsi_Sicons.sfsi_Sicons_position_left {
+  display: none;
+}

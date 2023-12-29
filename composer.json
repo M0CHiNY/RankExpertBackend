@@ -39,6 +39,7 @@
     "wpackagist-plugin/contact-form-7-skins": "^2.6",
     "wpackagist-plugin/copy-delete-posts": "^1.4",
     "wpackagist-plugin/show-current-template": "^0.5.2",
+    "wpackagist-plugin/ultimate-social-media-icons": "^2.8",
     "wpengine/advanced-custom-fields-pro": "^6.2"
   },
   "extra": {
