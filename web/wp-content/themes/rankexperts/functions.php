@@ -113,5 +113,9 @@ require get_template_directory() . '/inc/stars.php';
  */
 require get_template_directory() . '/inc/сustom-categories.php';
 
-// br for contact form 7
+//remove <br> for contact form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+// Setting the number of views
+require get_template_directory() . '/inc/views.php';

@@ -86,7 +86,7 @@
   align-items: center;
   gap: 8px;
 }
-.pagination .page-numbers.current > .pagination__item {
+.pagination .page-numbers.current > .pagination__item{
   background-color: #b81f26;
   color: white;
 }
@@ -103,15 +103,20 @@
 
 .blog-article__title a,
 .blog-article__item-title a {
-  color: #201f1d;
+  color:#201F1D;
 }
 .blog-article__title a:hover,
 .blog-article__item-title a:hover {
   color: blue;
 }
-.pagination.showcase {
+.pagination.showcase{
   grid-column: span 2;
 }
+/* delete field icons on the single page */
+.sfsi_Sicons.sfsi_Sicons_position_left {
+  display: none;
+}
+
 
 /* tags  */
 

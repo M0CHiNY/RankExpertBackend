@@ -1579,11 +1579,7 @@ p {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media (min-width: 1920px) {
-  .footer__link-list {
-    margin-right: 50px;
-  }
-}
+
 .footer__link-item {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
