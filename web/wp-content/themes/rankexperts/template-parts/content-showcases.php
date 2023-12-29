@@ -60,18 +60,19 @@ endif;
                 echo paginate_links(array(
                     'total' => $custom_query->max_num_pages,
                     'current' => max(1, get_query_var('paged')),
-                    'format' => '?paged=%#%',
+                    'format' => 'page/%#%',
                     'show_all' => false,
                     'end_size' => 1,
                     'mid_size' => 2,
                     'prev_next' => true,
                     'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M25.6042 18.1459L20.2083 23.5417C20.0152 23.7344 19.862 23.9634 19.7574 24.2154C19.6529 24.4674 19.5991 24.7376 19.5991 25.0104C19.5991 25.2833 19.6529 25.5535 19.7574 25.8055C19.862 26.0575 20.0152 26.2865 20.2083 26.4792L25.6042 31.875C26.9167 33.1875 29.1667 32.25 29.1667 30.3959V19.6042C29.1667 17.75 26.9167 16.8334 25.6042 18.1459Z" fill="#201F1D"/></svg>',
                     'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M24.3958 18.1459L29.7917 23.5417C29.9848 23.7344 30.138 23.9634 30.2426 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2426 25.8055C30.138 26.0575 29.9848 26.2865 29.7917 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D"></path></svg>',
-                    'add_args' => false,
+                    'add_args' => true,
                     'add_fragment' => '',
                     'before_page_number' => '<div class="pagination__item">',
                     'after_page_number' => '</div>',
                 ));
+
                 wp_reset_postdata();
                 ?>
             </div>

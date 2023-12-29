@@ -35,11 +35,14 @@
     "drupal-composer/preserve-paths": "^0.1",
     "johnpbloch/wordpress-core": "~6.0",
     "johnpbloch/wordpress-core-installer": "^2.0",
+    "wpackagist-plugin/complianz-gdpr": "^6.5",
     "wpackagist-plugin/contact-form-7": "^5.8",
     "wpackagist-plugin/contact-form-7-skins": "^2.6",
     "wpackagist-plugin/copy-delete-posts": "^1.4",
+    "wpackagist-plugin/polylang": "^3.5",
     "wpackagist-plugin/show-current-template": "^0.5.2",
     "wpackagist-plugin/ultimate-social-media-icons": "^2.8",
+    "wpackagist-plugin/wordpress-seo": "^21.7",
     "wpengine/advanced-custom-fields-pro": "^6.2"
   },
   "extra": {

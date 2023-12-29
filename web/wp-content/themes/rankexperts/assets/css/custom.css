@@ -112,7 +112,56 @@
 .pagination.showcase{
   grid-column: span 2;
 }
-
+/* delete field icons on the single page */
 .sfsi_Sicons.sfsi_Sicons_position_left {
   display: none;
+}
+
+
+/* tags  */
+
+.main-tags .main-tags__inner {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 24px;
+  width: fit-content;
+  justify-content: center;
+  background-color: #b81f26;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .main-tags .main-tags__inner {
+    font-size: 36px;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.blog-article-tags {
+  margin-bottom: 50px;
+}
+@media (min-width: 730px) {
+  .blog-article-tags {
+    gap: 30px;
+    display: flex;
+  }
+  .picture__inner{
+    max-width: 550px;
+    width: 100%;
+  }
+  .tags__contents{
+    max-width: 650px;
+  }
 }
