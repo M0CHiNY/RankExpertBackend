@@ -36,11 +36,11 @@ function rankexperts_scripts()
     if (is_page_template('template-showcases.php')) {
         wp_enqueue_style('rankexperts-showcases', get_template_directory_uri() . '/assets/css/showcases.css', array(), '1.0', 'all');
     }
-     // showcase page
-     if (is_page_template('template-services.php')) {
+    // showcase page
+    if (is_page_template('template-services.php')) {
         wp_enqueue_style('rankexperts-services', get_template_directory_uri() . '/assets/css/all-services.css', array(), '1.0', 'all');
     }
-    if (is_page_template('archive-blog.php')) {
+    if (is_page_template('archive-blog.php') || is_archive()) {
         wp_enqueue_style('rankexperts-blog', get_template_directory_uri() . '/assets/css/blog.css', array(), '1.0', 'all');
     }
     // showcase page

@@ -86,7 +86,7 @@ $query = new WP_Query($args); ?>
                                 $tags = get_the_terms(get_the_ID(), 'post_tag');
                                 if ($tags) {
                                     foreach ($tags as $tag) {
-                                        echo '<li class="tag">' . $tag->name . '</li>';
+                                        echo '<li class="tag"><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></li>';
                                     }
                                 }
                                 ?>
@@ -152,7 +152,7 @@ $query = new WP_Query($args); ?>
                                             $tags = get_the_terms(get_the_ID(), 'post_tag');
                                             if ($tags) {
                                                 foreach ($tags as $tag) {
-                                                    echo '<li class="tag">' . $tag->name . '</li>';
+                                                    echo '<li class="tag"><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></li>';
                                                 }
                                             }
                                             ?>

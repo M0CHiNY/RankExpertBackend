@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "979e19f1c157c6d4fd8bb85e4b7c6c74",
+    "content-hash": "6bc970d664a7d3a9fc2734a7337e5503",
     "packages": [
         {
             "name": "composer/installers",
@@ -318,6 +318,24 @@
             "time": "2020-04-16T21:44:57+00:00"
         },
         {
+            "name": "wpackagist-plugin/complianz-gdpr",
+            "version": "6.5.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/complianz-gdpr/",
+                "reference": "tags/6.5.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/complianz-gdpr.6.5.6.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/complianz-gdpr/"
+        },
+        {
             "name": "wpackagist-plugin/contact-form-7",
             "version": "5.8.5",
             "source": {
@@ -372,6 +390,24 @@
             "homepage": "https://wordpress.org/plugins/copy-delete-posts/"
         },
         {
+            "name": "wpackagist-plugin/polylang",
+            "version": "3.5.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/polylang/",
+                "reference": "tags/3.5.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/polylang.3.5.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/polylang/"
+        },
+        {
             "name": "wpackagist-plugin/show-current-template",
             "version": "0.5.2",
             "source": {
@@ -388,6 +424,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/show-current-template/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "21.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/21.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.21.7.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
@@ -413,5 +467,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

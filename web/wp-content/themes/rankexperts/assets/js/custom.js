@@ -25,17 +25,42 @@ function setMaxHeight(prew) {
 
 if (team) {
   // Викликати функцію при завантаженні сторінки
-  document.addEventListener("DOMContentLoaded", setMaxHeight('.team-swiper__slide'));
+  document.addEventListener(
+    "DOMContentLoaded",
+    setMaxHeight(".team-swiper__slide")
+  );
 }
 
 if (reviews) {
   // Викликати функцію при завантаженні сторінки
-  document.addEventListener("DOMContentLoaded", setMaxHeight('.reviews__text'));
+  document.addEventListener("DOMContentLoaded", setMaxHeight(".reviews__text"));
 }
 
 if (services) {
   // Викликати функцію при завантаженні сторінки
-  document.addEventListener("DOMContentLoaded", setMaxHeight('.card-item'));
+  document.addEventListener("DOMContentLoaded", setMaxHeight(".card-item"));
 }
 
+//pagination
 
+const next = document.querySelector(".next.page-numbers"),
+  prev = document.querySelector(".prev.page-numbers"),
+  pagination = document.querySelector(".pagination__items");
+
+function setPaginationTransform(translateXValue) {
+  if (pagination) {
+    pagination.style.transform = `translateX(${translateXValue}px)`;
+  }
+}
+
+if (prev) {
+  setPaginationTransform(-30);
+}
+
+if (next) {
+  setPaginationTransform(30);
+}
+
+if (prev && next) {
+  setPaginationTransform(0);
+}
