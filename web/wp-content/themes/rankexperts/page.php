@@ -9,9 +9,9 @@
 while (have_posts()) :
   the_post();
 ?>
-  <section class="search-info">
+  <section class="single-blog">
     <div class="container">
-      <h1 class="ruls__title title"><?php the_title(); ?></h1>
+      <h1 class="title" style="margin-bottom: 30px;"><?php the_title(); ?></h1>
       <div class="content-container">
         <?php the_content(); ?>
       </div>

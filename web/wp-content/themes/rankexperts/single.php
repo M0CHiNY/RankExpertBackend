@@ -13,9 +13,13 @@ get_header();
 
 <article class="single-blog">
   <div class="container">
-    <div class="single-blog__img">
-      <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="<?php the_title_attribute(); ?>" />
-    </div>
+    <?php
+    $image_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
+    if ($image_url) : ?>
+      <div class="single-blog__img">
+        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>" />
+      </div>
+    <?php endif; ?>
     <div class="blog-article__box">
       <div class="blog-article__athor">
         <?php
@@ -62,7 +66,14 @@ get_header();
           </div>
 
           <div class="content-share">
-            <?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?>
+            <?php
+            //plagin for socail icons
+            if (function_exists('is_plugin_active')) {
+              if (is_plugin_active('ultimate-social-media-icons/ultimate_social_media_icons.php')) {
+                echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]');
+              }
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -153,6 +164,7 @@ get_header();
     </div>
   </div>
 </div>
+
 
 
 <?php
