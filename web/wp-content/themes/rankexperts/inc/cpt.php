@@ -43,7 +43,8 @@ function rankexsperts_register_post_type()
     'rewrite' => array('slug' => 'Showcases'),
     'menu_icon' => 'dashicons-awards',
     'show_in_rest' => true,
-    'menu_position' => 3
+    'menu_position' => 3,
+    'hierarchical' => true,
   );
 
   register_post_type('showcases', $args);

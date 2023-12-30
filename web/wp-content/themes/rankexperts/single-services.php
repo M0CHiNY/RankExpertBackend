@@ -5,14 +5,9 @@
 get_header();
 ?>
 
-<div class="bread-crumb">
-  <div class="container">
-    <ul class="bread-crumb__box">
-      <li class="bread-crumb__iterm"><a class="bread-crumb__link" href="#">Home</a></li>
-      <li class="bread-crumb__iterm bread-crumb__iterm--step">SEO for e-commerce</li>
-    </ul>
-  </div>
-</div>
+<!-- Breadcrumb from yoast plugin start-->
+<?php get_template_part('template-parts/breadcrumbs'); ?>
+<!-- Breadcrumb from yoast plugin end-->
 
 <!-- section service-subhed start -->
 <?php get_template_part('template-parts/service-page/service', 'subhead'); ?>
