@@ -1,0 +1,144 @@
+{
+    "key": "group_658d9b956f2e7",
+    "title": "Footer social media fields",
+    "fields": [
+        {
+            "key": "field_658d9b96e741d",
+            "label": "Footer social media",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_658d9bc5e741e",
+            "label": "Display the block of footer social media",
+            "name": "footer__display-social",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_658d9c5ce741f",
+            "label": "Footer social media icons",
+            "name": "footer__social-icons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Додати рядок",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_658d9cf7e7420",
+                    "label": "Link to social network",
+                    "name": "footer__social-link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_658d9c5ce741f"
+                },
+                {
+                    "key": "field_658d9d58e7421",
+                    "label": "Add a social network icon",
+                    "name": "footer__social-icon",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "To add a social network icon image, you need to add code to the svg field",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_658d9c5ce741f"
+                },
+                {
+                    "key": "field_658d9df0e7422",
+                    "label": "Change the icon color",
+                    "name": "footer__color-icon",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "parent_repeater": "field_658d9c5ce741f"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "footer-social-media"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1703954424
+}

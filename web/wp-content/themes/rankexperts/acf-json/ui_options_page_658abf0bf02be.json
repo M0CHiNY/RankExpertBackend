@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_658abf0bf02be",
+    "title": "Additional settings",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Additional settings",
+    "menu_slug": "additional-settings",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-admin-generic",
+    "menu_title": "Additional settings",
+    "position": 8,
+    "redirect": 1,
+    "description": "",
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1703954425
+}

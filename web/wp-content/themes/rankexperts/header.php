@@ -85,19 +85,21 @@
                 <div class="lang-switcher-mobile">
                   <ul class="lang-switcher-mobile__list">
                     <?php
-                    $languages = pll_the_languages(array('raw' => 1));
-                    foreach ($languages as $language):
-                      $slug = $language['slug'];
-                      $name = $language['name'];
-                      $url = $language['url'];
-                      $current = $language['current_lang'] ? 'current' : '';
-                      ?>
-                      <li class="lang-switcher-mobile__item <?php echo $current; ?>">
-                        <a class="lang-switcher-mobile__link" href="<?php echo $url; ?>">
-                          <?php echo $name; ?>
-                        </a>
-                      </li>
-                    <?php endforeach; ?>
+                    if (is_plugin_active('polylang/polylang.php') && function_exists('pll_the_languages')):
+                      $languages = pll_the_languages(array('raw' => 1));
+                      foreach ($languages as $language):
+                        $slug = $language['slug'];
+                        $name = $language['name'];
+                        $url = $language['url'];
+                        $current = $language['current_lang'] ? 'current' : '';
+                        ?>
+                        <li class="lang-switcher-mobile__item <?php echo $current; ?>">
+                          <a class="lang-switcher-mobile__link" href="<?php echo $url; ?>">
+                            <?php echo $name; ?>
+                          </a>
+                        </li>
+                      <?php endforeach; ?>
+                    <?php endif; ?>
                   </ul>
                 </div>
 
@@ -123,26 +125,28 @@
             <ul class="lang-switcher">
               <ul class="lang-switcher">
                 <?php
-                $languages = pll_the_languages(array('raw' => 1));
-                foreach ($languages as $language):
-                  $slug = $language['slug'];
-                  $name = $language['slug'];
-                  $url = $language['url'];
-                  ?>
-                  <?php if ($language['current_lang']): ?>
-                    <li class="lang-switcher__item">
-                      <a href="<?php echo $url; ?>" class="lang-switcher-link current">
-                        <?php echo $name; ?>
-                      </a>
-                    </li>
-                  <?php else: ?>
-                    <li class="lang-switcher__item">
-                      <a href="<?php echo $url; ?>" class="lang-switcher-link">
-                        <?php echo $name; ?>
-                      </a>
-                    </li>
-                  <?php endif; ?>
-                <?php endforeach; ?>
+                if (is_plugin_active('polylang/polylang.php') && function_exists('pll_the_languages')):
+                  $languages = pll_the_languages(array('raw' => 1));
+                  foreach ($languages as $language):
+                    $slug = $language['slug'];
+                    $name = $language['slug'];
+                    $url = $language['url'];
+                    ?>
+                    <?php if ($language['current_lang']): ?>
+                      <li class="lang-switcher__item">
+                        <a href="<?php echo $url; ?>" class="lang-switcher-link current">
+                          <?php echo $name; ?>
+                        </a>
+                      </li>
+                    <?php else: ?>
+                      <li class="lang-switcher__item">
+                        <a href="<?php echo $url; ?>" class="lang-switcher-link">
+                          <?php echo $name; ?>
+                        </a>
+                      </li>
+                    <?php endif; ?>
+                  <?php endforeach; ?>
+                <?php endif; ?>
               </ul>
 
 
