@@ -102,11 +102,9 @@ $queryTest = new WP_Query($args);
                         </div>
                     </article>
                     <?php
-
-
                 endwhile;
             else:
-                echo 'Постів не знайдено.';
+                get_template_part('template-parts/content-none');
             endif;
 
             wp_reset_postdata();

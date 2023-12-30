@@ -48,7 +48,7 @@ if ($custom_query->have_posts()):
     <?php endwhile;
     wp_reset_postdata();
 else:
-    echo 'No posts found.';
+    get_template_part('template-parts/content-none');
 endif;
 
 ?>
