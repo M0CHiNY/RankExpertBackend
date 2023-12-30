@@ -1,10 +1,10 @@
 {
-    "key": "ui_options_page_658abe37b4cb8",
-    "title": "Contacts",
+    "key": "ui_options_page_658abe0ece83b",
+    "title": "Services",
     "active": true,
     "menu_order": 0,
-    "page_title": "Contacts",
-    "menu_slug": "contacts",
+    "page_title": "Services",
+    "menu_slug": "services",
     "parent_slug": "additional-settings",
     "advanced_configuration": 0,
     "icon_url": "",
@@ -18,11 +18,6 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-<<<<<<< HEAD
-    "_parent": 198,
-    "modified": 1703954263
-=======
     "_parent": 192,
     "modified": 1703954425
->>>>>>> master
 }
