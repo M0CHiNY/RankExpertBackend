@@ -42,7 +42,9 @@
     "wpackagist-plugin/polylang": "^3.5",
     "wpackagist-plugin/show-current-template": "^0.5.2",
     "wpackagist-plugin/ultimate-social-media-icons": "^2.8",
+    "wpackagist-plugin/webp-express": "^0.25.8",
     "wpackagist-plugin/wordpress-seo": "^21.7",
+    "wpackagist-plugin/wp-optimize": "^3.2",
     "wpengine/advanced-custom-fields-pro": "^6.2"
   },
   "extra": {

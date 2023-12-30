@@ -23,16 +23,9 @@ $args = array(
 
 $query = new WP_Query($args); ?>
 
-<div class="bread-crumb">
-    <div class="container">
-        <ul class="bread-crumb__box">
-            <li class="bread-crumb__iterm">
-                <a class="bread-crumb__link" href="#">Home</a>
-            </li>
-            <li class="bread-crumb__iterm bread-crumb__iterm--step">blog</li>
-        </ul>
-    </div>
-</div>
+<!-- Breadcrumb from yoast plugin start-->
+<?php get_template_part('template-parts/breadcrumbs'); ?>
+<!-- Breadcrumb from yoast plugin end-->
 
 <section class="blog">
     <div class="container">

@@ -11,21 +11,9 @@ get_header();
     <div class="showcase-more__top-wrapper">
         <div class="showcase-more__top">
             <div class="container">
-                <div class="bread-crumb">
-                    <div class="container">
-                        <ul class="bread-crumb__box">
-                            <li class="bread-crumb__iterm">
-                                <a class="bread-crumb__link" href="#">Home</a>
-                            </li>
-                            <li class="bread-crumb__iterm">
-                                <a class="bread-crumb__link" href="#">Showcases</a>
-                            </li>
-                            <li class="bread-crumb__iterm bread-crumb__iterm--step">
-                                SEO for Tax Lawyers Company
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- Breadcrumb from yoast plugin start-->
+                <?php get_template_part('template-parts/breadcrumbs'); ?>
+                <!-- Breadcrumb from yoast plugin end-->
                 <h1 class="showcase-more__title title">
                     <?php the_title(); ?>>
                 </h1>
