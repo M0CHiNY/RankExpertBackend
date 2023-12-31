@@ -1,6 +1,6 @@
 <?php
 $postArgsTeam = [
-    'post_type' => 'rersons',
+    'post_type' => 'persons',
     'posts_per_page' => -1,
 ];
 

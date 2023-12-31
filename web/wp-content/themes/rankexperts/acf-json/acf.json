@@ -101,7 +101,7 @@
                 {
                     "param": "page_template",
                     "operator": "==",
-                    "value": "template-services.php"
+                    "value": "archive-services.php"
                 }
             ]
         ],
@@ -1870,7 +1870,7 @@
                 {
                     "param": "page_template",
                     "operator": "==",
-                    "value": "home.php"
+                    "value": "front-page.php"
                 }
             ]
         ],
