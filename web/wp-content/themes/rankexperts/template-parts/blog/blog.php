@@ -1,19 +1,4 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package rankexperts
- */
-/**
- * Template name: Blog template
- */
-
-get_header();
-?>
-
-<?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'post_type' => 'post',
@@ -195,5 +180,3 @@ $query = new WP_Query($args); ?>
     </div>
 
 </section>
-<?php
-get_footer();

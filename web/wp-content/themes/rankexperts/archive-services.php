@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Template name: All services
+ * Template name: Services template
+ * 
  */
 
 get_header();
