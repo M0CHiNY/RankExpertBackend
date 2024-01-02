@@ -8,8 +8,8 @@
     </h4>
     <ul class="contact__list">
       <?php
-      if (have_rows('contacts__numbers')) :
-        while (have_rows('contacts__numbers')) : the_row();
+      if (have_rows('contacts__numbers', 'option')) :
+        while (have_rows('contacts__numbers', 'option')) : the_row();
       ?>
           <li class="contact__list-item">
             <a class="contact__link" href="tel:+<?php echo esc_html(get_sub_field('contacts__phone', 'option')); ?>">

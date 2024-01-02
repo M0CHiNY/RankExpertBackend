@@ -38,6 +38,7 @@ get_header();
     </div>
     <div class="content-container__wrapper">
       <div class="content-container">
+          <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
         <ul class="list-tags">
           <?php

@@ -10,7 +10,7 @@
         if (have_rows('service_advantage__list')) :
           while (have_rows('service_advantage__list')) : the_row();
         ?>
-            <li class="service-advantage__item"><?php echo get_sub_field('service-advantage__text', get_the_ID()); ?></li>
+            <li class="service-advantage__item"><?php echo get_sub_field('service_advantage__text', get_the_ID()); ?></li>
         <?php
           endwhile;
         endif;

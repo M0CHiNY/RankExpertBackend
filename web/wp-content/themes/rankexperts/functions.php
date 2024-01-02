@@ -44,6 +44,7 @@ function rankexperts_setup()
 			'search-form',
 			'comment-form',
 			'comment-list',
+			'post-thumbnails',
 			'gallery',
 			'caption',
 			'style',
