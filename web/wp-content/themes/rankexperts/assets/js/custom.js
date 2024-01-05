@@ -1,6 +1,7 @@
 const team = document.querySelector(".team");
 const reviews = document.querySelector(".reviews");
 const services = document.querySelector(".marketing");
+const step = document.querySelector(".ruls");
 
 // Функція для встановлення висоти елементів
 function setMaxHeight(prew) {
@@ -41,6 +42,11 @@ if (services) {
   document.addEventListener("DOMContentLoaded", setMaxHeight(".card-item"));
 }
 
+if (step) {
+  // Викликати функцію при завантаженні сторінки
+  document.addEventListener("DOMContentLoaded", setMaxHeight(".ruls__item"));
+}
+
 //pagination
 
 const next = document.querySelector(".next.page-numbers"),
@@ -64,3 +70,20 @@ if (next) {
 if (prev && next) {
   setPaginationTransform(0);
 }
+
+     document.addEventListener('DOMContentLoaded', function () {
+            // Перевірка розширення екрану та орієнтації
+            function checkScreenSize() {
+                if (window.innerWidth > 1024 || window.innerHeight > window.innerWidth) {
+                    document.getElementById('mob-nav').removeAttribute('hidden');
+                } else {
+                    document.getElementById('mob-nav').setAttribute('hidden', 'true');
+                }
+            }
+
+            // Перевірка при завантаженні сторінки
+            checkScreenSize();
+
+            // Додавання слухача подій для зміни розміру вікна
+            window.addEventListener('resize', checkScreenSize);
+        });

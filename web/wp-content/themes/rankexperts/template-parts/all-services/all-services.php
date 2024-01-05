@@ -1,41 +1,48 @@
 <section class="marketing all-services" id="down">
   <div class="container">
-    <h1 class="marketing__title title">
-      <?php the_title(); ?>
-    </h1>
-      <div class="marketing__slogan">
-        <?php the_content(); ?>
-      </div>
+    <?php if ($divisionTitle = get_field('title_page', 'option')): ?>
+      <h2 class="marketing__title title">
+        <?php echo $divisionTitle; ?>
+      </h2>
+    <?php endif; ?>
+    <?php if ($slogan = get_field('description_page', 'option')): ?>
+      <p class="marketing__slogan">
+        <?php echo $slogan ?>
+      </p>
+    <?php endif; ?>
     <div class="marketing__wrap">
-      <?php if (get_field('all__services', get_the_ID())): ?>
-        <?php foreach (get_field('all__services', get_the_ID()) as $settings): ?>
+      <?php if (get_field('archive-categories', 'option')): ?>
+        <?php foreach (get_field('archive-categories', 'option') as $settings): ?>
           <div class="marketing__card-box">
-            <?php if (!empty($settings['all__categories__title'])): ?>
+            <?php if (!empty($settings['title'])): ?>
               <h3 class="marketing__card-title">
-                <?php echo $settings['all__categories__title']; ?>
+                <?php echo $settings['title']; ?>
               </h3>
             <?php endif; ?>
-            <?php if (!empty($settings['all__categories_description'])): ?>
+            <?php if (!empty($settings['description'])): ?>
               <p class="marketing__card-descr">
-                <?php echo $settings['all__categories_description']; ?>
+                <?php echo $settings['description']; ?>
               </p>
             <?php endif; ?>
             <?php ?>
             <div class="cards">
               <?php
-              $terms = get_terms(array(
-                'taxonomy' => 'categories', // Замініть на вашу реальну назву таксономії
-                'hide_empty' => false, // Щоб включити терміни, які не мають пов'язаних записів
-              ));
+              $terms = get_terms(
+                array(
+                  'taxonomy' => 'category', // Замініть на вашу реальну назву таксономії
+                  'hide_empty' => false, // Щоб включити терміни, які не мають пов'язаних записів
+                )
+              );
               $category_slugs = wp_list_pluck($terms, 'slug');
               $postServicesArgs = array(
-                'post_type' => 'services',
-                'posts_per_page' => -1,
+                'post_type' => 'onlinemarketing',
+                'posts_per_page' => -3,
+                'order' => 'ASC',
                 'tax_query' => array(
                   array(
-                    'taxonomy' => 'categories', // Замініть на вашу реальну назву таксономії
+                    'taxonomy' => 'category', // Замініть на вашу реальну назву таксономії
                     'field' => 'slug',
-                    'terms' => $settings['all__categories']->slug,
+                    'terms' => $settings['categories']->slug,
                   ),
                 ),
               );

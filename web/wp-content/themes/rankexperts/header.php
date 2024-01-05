@@ -46,7 +46,7 @@
 
           <div class="header__navigation">
             <!-- navigation menu start-->
-            <div class="mob-nav" id="mob-nav">
+            <div class="mob-nav" id="mob-nav" hidden>
               <div data-ui-dialog-backdrop class="mob-nav-backdrop"></div>
               <div data-ui-dialog-content class="mob-nav-content">
                 <div class="mob-nav-content__inner">

@@ -1,5 +1,5 @@
 <?php
-$countPost = is_home() || is_page_template('home.php') ? '4' : '6';
+$countPost = (is_front_page()) ? '4' : '6';
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $postArgs = [
     'post_type' => 'showcases',
@@ -52,7 +52,7 @@ else:
 endif;
 
 ?>
-<?php if (is_page_template('template-showcases.php')): ?>
+<?php if (!is_front_page()): ?>
     <div class="pagination showcase">
         <div class="container">
             <div class="pagination__items">

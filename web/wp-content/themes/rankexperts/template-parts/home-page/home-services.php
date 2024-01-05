@@ -29,16 +29,17 @@
               <div class="cards">
                 <?php
                 $terms = get_terms(array(
-                  'taxonomy' => 'categories', // Замініть на вашу реальну назву таксономії
+                  'taxonomy' => 'category', // Замініть на вашу реальну назву таксономії
                   'hide_empty' => false, // Щоб включити терміни, які не мають пов'язаних записів
                 ));
                 $category_slugs = wp_list_pluck($terms, 'slug');
                 $postServicesArgs = array(
-                  'post_type' => 'services',
+                  'post_type' => 'onlinemarketing',
                   'posts_per_page' => -3,
+                  'order'=> 'ASC',
                   'tax_query' => array(
                     array(
-                      'taxonomy' => 'categories', // Замініть на вашу реальну назву таксономії
+                      'taxonomy' => 'category', // Замініть на вашу реальну назву таксономії
                       'field' => 'slug',
                       'terms' => $settings['settings__categories']->slug,
                     ),
