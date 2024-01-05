@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Services template
+ * Template name: Online marketing template
  * 
  */
 

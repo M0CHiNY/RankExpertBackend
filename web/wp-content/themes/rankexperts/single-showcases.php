@@ -15,7 +15,7 @@ get_header();
                 <?php get_template_part('template-parts/breadcrumbs'); ?>
                 <!-- Breadcrumb from yoast plugin end-->
                 <h1 class="showcase-more__title title">
-                    <?php the_title(); ?>>
+                    <?php the_title(); ?>
                 </h1>
             </div>
         </div>
@@ -112,9 +112,9 @@ get_header();
                     <div class="action__inner">
                         <div class="action__items">
                             <div class="action__item">
-                                <div class="action__item-title">
-                                    <?php the_field('consultaion__title'); ?>
-                                </div>
+                                <h2 class="action__item-title">
+                                    <?php the_field('consultaion__title', get_the_ID(), false); ?>
+                                </h2>
                                 <?php the_field('consultaion__description'); ?>
                             </div>
                             <div class="action__item">

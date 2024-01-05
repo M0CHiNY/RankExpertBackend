@@ -2,6 +2,7 @@
 $postArgsTeam = [
     'post_type' => 'persons',
     'posts_per_page' => -1,
+    'order'=> 'ASC'
 ];
 
 $team_query = new WP_Query($postArgsTeam);

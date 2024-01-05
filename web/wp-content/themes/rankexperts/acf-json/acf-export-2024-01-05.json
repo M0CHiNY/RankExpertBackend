@@ -1,3 +1,4 @@
+
 [
     {
         "key": "group_658d58e564130",
@@ -6,7 +7,7 @@
             {
                 "key": "field_658d58e5d19ff",
                 "label": "Sort of services",
-                "name": "all__services",
+                "name": "acf__online__martketing",
                 "aria-label": "",
                 "type": "repeater",
                 "instructions": "",
@@ -60,9 +61,9 @@
                             "class": "",
                             "id": ""
                         },
-                        "taxonomy": "categories",
+                        "taxonomy": "category",
                         "add_term": 1,
-                        "save_terms": 0,
+                        "save_terms": 1,
                         "load_terms": 0,
                         "return_format": "object",
                         "field_type": "select",
@@ -99,9 +100,9 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "post_template",
                     "operator": "==",
-                    "value": "archive-services.php"
+                    "value": "archive-onlinemarketing.php"
                 }
             ]
         ],
@@ -1691,7 +1692,7 @@
                     "id": ""
                 },
                 "post_type": [
-                    "services"
+                    "onlinemarketing"
                 ],
                 "post_status": [
                     "publish"
@@ -1953,7 +1954,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "rersons"
+                    "value": "persons"
                 }
             ]
         ],
@@ -2315,7 +2316,7 @@
                     {
                         "key": "field_65858a513afea",
                         "label": "Main text",
-                        "name": "Main text",
+                        "name": "service_advantage__text",
                         "aria-label": "",
                         "type": "text",
                         "instructions": "",
@@ -3172,7 +3173,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "services"
+                    "value": "onlinemarketing"
                 }
             ]
         ],
@@ -3264,9 +3265,9 @@
                             "class": "",
                             "id": ""
                         },
-                        "taxonomy": "categories",
+                        "taxonomy": "category",
                         "add_term": 1,
-                        "save_terms": 0,
+                        "save_terms": 1,
                         "load_terms": 0,
                         "return_format": "object",
                         "field_type": "select",
@@ -3364,6 +3365,70 @@
                     "param": "options_page",
                     "operator": "==",
                     "value": "services"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_6597fce68bf29",
+        "title": "Showcacse-option",
+        "fields": [
+            {
+                "key": "field_6597fce86957e",
+                "label": "Title for page",
+                "name": "showcases-title-page",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6597fd5e6957f",
+                "label": "Description for page",
+                "name": "showcases-description-page",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "showcases"
                 }
             ]
         ],
@@ -3782,7 +3847,7 @@
                 "label": "Title",
                 "name": "consultaion__title",
                 "aria-label": "",
-                "type": "text",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3792,10 +3857,10 @@
                     "id": ""
                 },
                 "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_658aa629b8ca4",
@@ -3838,6 +3903,162 @@
         "show_in_rest": 0
     },
     {
+        "key": "group_6597f9993ace2",
+        "title": "Sort of services",
+        "fields": [
+            {
+                "key": "field_6597fa73d78d9",
+                "label": "Title for page",
+                "name": "title_page",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6597fa8fd78da",
+                "label": "Description for page",
+                "name": "description_page",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6597f99a0527b",
+                "label": "Sort of services",
+                "name": "archive-categories",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Додати рядок",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_6597f9d40527c",
+                        "label": "Title for category",
+                        "name": "title",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_6597f99a0527b"
+                    },
+                    {
+                        "key": "field_6597f9ec0527d",
+                        "label": "Categories",
+                        "name": "categories",
+                        "aria-label": "",
+                        "type": "taxonomy",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "taxonomy": "category",
+                        "add_term": 1,
+                        "save_terms": 1,
+                        "load_terms": 0,
+                        "return_format": "object",
+                        "field_type": "radio",
+                        "allow_null": 0,
+                        "bidirectional": 0,
+                        "multiple": 0,
+                        "bidirectional_target": [],
+                        "parent_repeater": "field_6597f99a0527b"
+                    },
+                    {
+                        "key": "field_6597fa110527e",
+                        "label": "Description for category",
+                        "name": "description",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_6597f99a0527b"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "online-marketing"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
         "key": "ui_options_page_658abf0bf02be",
         "title": "Additional settings",
         "active": true,
@@ -3849,6 +4070,27 @@
         "icon_url": "dashicons-admin-generic",
         "menu_title": "Additional settings",
         "position": 8,
+        "redirect": 1,
+        "description": "",
+        "update_button": "Update",
+        "updated_message": "Options Updated",
+        "capability": "edit_posts",
+        "data_storage": "options",
+        "post_id": "",
+        "autoload": 0
+    },
+    {
+        "key": "ui_options_page_6597f8328c478",
+        "title": "Archive pages",
+        "active": true,
+        "menu_order": 0,
+        "page_title": "Archive pages",
+        "menu_slug": "ar",
+        "parent_slug": "none",
+        "advanced_configuration": 1,
+        "icon_url": "",
+        "menu_title": "",
+        "position": 6,
         "redirect": 1,
         "description": "",
         "update_button": "Update",
@@ -3922,6 +4164,27 @@
         "autoload": 0
     },
     {
+        "key": "ui_options_page_6597f8dbcbb8f",
+        "title": "Online-marketing",
+        "active": true,
+        "menu_order": 0,
+        "page_title": "Online-marketing",
+        "menu_slug": "online-marketing",
+        "parent_slug": "ar",
+        "advanced_configuration": 1,
+        "icon_url": "",
+        "menu_title": "",
+        "position": "",
+        "redirect": false,
+        "description": "",
+        "update_button": "Update",
+        "updated_message": "Options Updated",
+        "capability": "edit_posts",
+        "data_storage": "options",
+        "post_id": "",
+        "autoload": 0
+    },
+    {
         "key": "ui_options_page_658abe0ece83b",
         "title": "Services",
         "active": true,
@@ -3929,6 +4192,27 @@
         "page_title": "Services",
         "menu_slug": "services",
         "parent_slug": "additional-settings",
+        "advanced_configuration": 0,
+        "icon_url": "",
+        "menu_title": "",
+        "position": "",
+        "redirect": false,
+        "description": "",
+        "update_button": "Update",
+        "updated_message": "Options Updated",
+        "capability": "edit_posts",
+        "data_storage": "options",
+        "post_id": "",
+        "autoload": 0
+    },
+    {
+        "key": "ui_options_page_6597f94884a46",
+        "title": "Showcases",
+        "active": true,
+        "menu_order": 0,
+        "page_title": "Showcases",
+        "menu_slug": "showcases",
+        "parent_slug": "ar",
         "advanced_configuration": 0,
         "icon_url": "",
         "menu_title": "",

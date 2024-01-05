@@ -1,17 +1,16 @@
 <?php
-function services_categories()
-{
+// function marketing_categories()
+// {
 
-    $args = array(
-        'label' => 'Categories',
-        'public' => true,
-        'hierarchical' => true,
-    );
+//     $args = array(
+//         'label' => 'Categories type',
+//         'public' => true,
+//     );
 
-    register_taxonomy('categories', 'services', $args);
-}
+//     register_taxonomy('categories-marketing', 'onlinemarketing', $args);
+// }
 
-// Викликати функцію реєстрації таксономії
-add_action('init', 'services_categories');
+// // Викликати функцію реєстрації таксономії
+// add_action('init', 'marketing_categories');
 
 

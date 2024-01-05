@@ -27,9 +27,9 @@
                                                     fill="black" />
                                             </svg>
                                         </div>
-                                        <?php if (!empty($card->post_name)): ?>
+                                        <?php if (!empty($card->post_title)): ?>
                                             <h4 class="card-item__caption">
-                                                <?php echo $card->post_name; ?>
+                                                <?php echo $card->post_title; ?>
                                             </h4>
                                         <?php endif; ?>
                                     </div>

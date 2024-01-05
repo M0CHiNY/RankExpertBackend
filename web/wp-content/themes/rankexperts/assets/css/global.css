@@ -165,56 +165,57 @@ input {
   font-family: Hind Madurai;
   font-style: normal;
   font-weight: 300;
-  src: url(../fonts/HindMadurai-Light.woff) format("woff"),
-    url(../fonts/HindMadurai-Light.woff2) format("woff2");
+  src: url(../fonts/hindmadurai-light-webfont.woff) format("woff"),
+    url(../fonts/hindmadurai-light-webfont.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Hind Madurai;
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/HindMadurai-Regular.woff) format("woff"),
-    url(../fonts/HindMadurai-Regular.woff2) format("woff2");
+  src: url(../fonts/hindmadurai-regular-webfont.woff) format("woff"),
+    url(../fonts/hindmadurai-regular-webfont.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Hind Madurai;
   font-style: normal;
   font-weight: 500;
-  src: url(../fonts/HindMadurai-Medium.woff) format("woff"),
-    url(../fonts/HindMadurai-Medium.woff2) format("woff2");
+  src: url(../fonts/hindmadurai-medium-webfont.woff) format("woff"),
+    url(../fonts/hindmadurai-medium-webfont.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Mukta Vaani;
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/MuktaVaani-Regular.woff) format("woff"),
-    url(../fonts/MuktaVaani-Regular.woff2) format("woff2");
+  src: url(../fonts/muktavaani-regular-webfont.woff) format("woff"),
+    url(../fonts/muktavaani-regular-webfont.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Mukta Vaani;
   font-style: normal;
   font-weight: 500;
-  src: url(../fonts/MuktaVaani-Medium.woff) format("woff"),
-    url(../fonts/MuktaVaani-Medium.woff2) format("woff2");
+  src: url(../fonts/muktavaani-medium-webfont.woff) format("woff"),
+    url(../fonts/Mmuktavaani-medium-webfont.woff2) format("woff2");
+ 
 }
 @font-face {
   font-display: swap;
   font-family: Mukta Vaani;
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/MuktaVaani-Bold.woff) format("woff"),
-    url(../fonts/MuktaVaani-Bold.woff2) format("woff2");
+  src: url(../fonts/muktavaani-bold-webfont.woff) format("woff"),
+    url(../fonts/muktavaani-bold-webfont.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Ubuntu-Regular.woff) format("woff"),
-    url(../fonts/Ubuntu-Regular.woff2) format("woff2");
+  src: url(../fonts/ubuntu-regular-webfont.woff) format("woff"),
+    url(../fonts/ubuntu-regular-webfont.woff2) format("woff2");
 }
 body,
 html {
@@ -256,10 +257,16 @@ html {
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-top: 80px;
+  position:relative;
+   z-index:5;
+	background:#fff;
 }
 @media (min-width: 1024px) {
   .main {
     margin-top: 97px;
+	position:relative;
+	z-index:5;
+	background:#fff;
   }
 }
 .container-big {
@@ -1112,6 +1119,9 @@ p {
 .modal-form__box.modal-form__box--size.modal-form__box--first {
   margin-top: 25px;
 }
+.modal-form__box.modal-form__box--file{
+    margin-bottom:18px;
+}
 
 @media (min-width: 1024px) {
   .modal-form__box.modal-form__box--size {
@@ -1159,7 +1169,7 @@ p {
   justify-content: space-between;
   margin-left: auto;
   padding: 3px 11px;
-  width: calc(120.60194px + 0.90615vw);
+  width: fit-content;
 }
 .modal-form__box--file .modal-form__input {
   background-color: transparent;
@@ -1170,6 +1180,7 @@ p {
   width: 0;
 }
 .modal-form__box--file svg {
+  margin-left: 10px;
   height: 20px;
   width: 20px;
 }
@@ -1592,20 +1603,26 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 30px;
+  height: 40px;
   justify-content: center;
   margin-bottom: 5px;
-  width: 30px;
+  width: 40px;
 }
+
 .footer__link-item:not(:last-child) {
   margin-right: 15px;
 }
+
 .footer__link-icon {
   display: block;
-  height: 30px;
+  height: 40px;
   -webkit-transition: fill 1.3s ease;
   transition: fill 1.3s ease;
-  width: 30px;
+  width: 40px;
+}
+
+.footer__link-icon svg {
+  width: 40px;
 }
 @media (min-width: 1024px) {
   .footer__link-icon:hover.footer__link-icon--tg svg path {
@@ -1761,13 +1778,21 @@ p {
   padding-left: 15px;
   position: relative;
 }
-.bread-crumb__iterm:not(:first-child):before {
-  content: "/";
-  left: 0;
-  position: absolute;
-}
-.bread-crumb__iterm--step {
+
+.bread-crumb__iterm {
   color: #8f8f8e;
+}
+.bread-crumb__iterm span {
+  color: #8f8f8e;
+}
+.bread-crumb__iterm a {
+  color: #8f8f8e;
+}
+.bread-crumb__iterm span span:last-child {
+  color: #201f1d;
+}
+.showcase-more .bread-crumb__iterm span span:last-child {
+  color: #fff;
 }
 .bread-crumb__link {
   color: inherit;
@@ -1775,4 +1800,8 @@ p {
   font-size: calc(14.05825px + 0.5178vw);
   font-weight: 400;
   margin-right: 5px;
+}
+.footer {
+	position:relative;
+	z-index:1;
 }

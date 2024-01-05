@@ -6,11 +6,13 @@
 function rankexperts_scripts()
 {
   //scripts global
+  
   wp_enqueue_style('rankexperts-global', get_template_directory_uri() . '/assets/css/global.css', array(), '1.0', 'all');
   wp_enqueue_script('rankexperts-jolty-libs', get_template_directory_uri() . '/assets/js/joltyComponents/jolty-libs.js', array(), '1.0.0', true);
   wp_enqueue_script('rankexperts-jolty-main', get_template_directory_uri() . '/assets/js/joltyComponents/jolty-main.js', array(), '1.0.0', true);
   wp_enqueue_script('rankexperts-scroll', get_template_directory_uri() . '/assets/js/scroll.js', array(), '1.0.0', true);
   wp_enqueue_script('rankexperts-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), '1.0.0', true);
+ 
 
   // home page scritps
   if (is_front_page() || is_home()) {
@@ -27,19 +29,20 @@ function rankexperts_scripts()
     wp_enqueue_script('rankexperts-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper.js', array(), '1.0.0', true);
   }
   // single page for service
-  if (is_singular('services')) {
-    wp_enqueue_style('rankexperts-single-service', get_template_directory_uri() . '/assets/css/single-service.css', array(), '1.0', 'all');
-    wp_enqueue_script('rankexperts-single-service', get_template_directory_uri() . '/assets/js/single-service.js', array(), '1.0.0', true);
+  if (is_singular('onlinemarketing')) {
+    wp_enqueue_style('rankexperts-single-online-marketing', get_template_directory_uri() . '/assets/css/single-service.css', array(), '1.0', 'all');
+    wp_enqueue_script('rankexperts-single-online-marketing', get_template_directory_uri() . '/assets/js/single-service.js', array(), '1.0.0', true);
   }
 
   // showcase page
-  if (is_page_template('archive-showcases.php')) {
+  if (is_archive()) {
     wp_enqueue_style('rankexperts-showcases', get_template_directory_uri() . '/assets/css/showcases.css', array(), '1.0', 'all');
+    wp_enqueue_style('rankexperts-archive-online-marketing', get_template_directory_uri() . '/assets/css/all-services.css', array(), '1.0', 'all');
   }
   // services page
-  if (is_page_template('archive-services.php')) {
-    wp_enqueue_style('rankexperts-services', get_template_directory_uri() . '/assets/css/all-services.css', array(), '1.0', 'all');
-  }
+  // if (is_page_template('archive-onlinemarketing.php')) {
+    
+  // }
   if (is_home()) {
     wp_enqueue_style('rankexperts-blog', get_template_directory_uri() . '/assets/css/blog.css', array(), '1.0', 'all');
   }
@@ -71,3 +74,4 @@ function rankexperts_scripts()
   wp_enqueue_style('rankexperts-custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'rankexperts_scripts');
+

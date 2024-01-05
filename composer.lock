@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e7a38646c467bf2a136720847c9c923",
+    "content-hash": "36fd6e14693a86db3fd62957477ac6ba",
     "packages": [
         {
             "name": "composer/installers",
@@ -318,6 +318,24 @@
             "time": "2020-04-16T21:44:57+00:00"
         },
         {
+            "name": "wpackagist-plugin/acf-options-for-polylang",
+            "version": "1.1.11",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/acf-options-for-polylang/",
+                "reference": "tags/1.1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/acf-options-for-polylang.1.1.11.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/acf-options-for-polylang/"
+        },
+        {
             "name": "wpackagist-plugin/complianz-gdpr",
             "version": "6.5.6",
             "source": {
@@ -388,6 +406,42 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/copy-delete-posts/"
+        },
+        {
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "4.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/4.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
+        },
+        {
+            "name": "wpackagist-plugin/multilingual-contact-form-7-with-polylang",
+            "version": "1.0.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/multilingual-contact-form-7-with-polylang/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/multilingual-contact-form-7-with-polylang.zip?timestamp=1684998022"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/multilingual-contact-form-7-with-polylang/"
         },
         {
             "name": "wpackagist-plugin/polylang",
