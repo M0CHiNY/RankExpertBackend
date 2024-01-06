@@ -933,8 +933,8 @@
 .team .team-swiper__slide .team-swiper__email {
   border-bottom: 1px solid transparent;
   color: #f5f6f0;
-  font-size: 20px;
-  padding-left: 40px;
+  font-size: 18px;
+  padding-left: 30px;
   position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -949,18 +949,24 @@
 .team .team-swiper__slide .team-swiper__email:before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNSIgZmlsbD0ibm9uZSI+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjRjVGNkYwIiBkPSJNMTguMjYgMTUuMjE1YzAgMS4wNS4yOTkgMS40NjkgMS4wOCAxLjQ2OSAxLjc0MSAwIDIuODUtMi4yMiAyLjg1LTUuOTEgMC01LjY0LTQuMTEtOC4zNC05LjI0MS04LjM0LTUuMjc5IDAtMTAuMDggMy41NC0xMC4wOCAxMC4yMyAwIDYuMzkgNC4yIDkuODcgMTAuNjUgOS44NyAyLjE5IDAgMy42Ni0uMjQgNS45MDktLjk5bC40ODIgMi4wMWMtMi4yMi43Mi00LjU5Mi45My02LjQyMS45My04LjQ2IDAtMTIuOTkxLTQuNjUtMTIuOTkxLTExLjgyIDAtNy4yMyA1LjI1LTEyLjE1IDEyLjQ4LTEyLjE1IDcuNTMgMCAxMS41MiA0LjUgMTEuNTIgMTAuMDIgMCA0LjY4LTEuNDcgOC4yNS02LjA5IDguMjUtMi4xIDAtMy40OC0uODQtMy42Ni0yLjcwMi0uNTQgMi4wNy0xLjk4IDIuNzAyLTMuOTMgMi43MDItMi42MSAwLTQuOC0yLjAxMi00LjgtNi4wNiAwLTQuMDggMS45Mi02LjYgNS4zNy02LjYgMS44MyAwIDIuOTcuNzIgMy40NzggMS44NmwuODcyLTEuNTloMi41MnY4LjgyaC4wMDJabS0zLjY4OS0zLjk2YzAtMS42NDktMS4yMy0yLjM0LTIuMjUtMi4zNC0xLjExIDAtMi4zNC44OTktMi4zNCAzLjU0IDAgMi4xLjkzIDMuMjcgMi4zNCAzLjI3Ljk5IDAgMi4yNS0uNjMgMi4yNS0yLjM3di0yLjFaIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgyNXYyNUgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==);
   content: "";
-  height: 20px;
+  height: 25px;
   left: 0;
   position: absolute;
   top: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 20px;
+  width: 25px;
 }
 @media (min-width: 1024px) {
   .team .team-swiper__slide .team-swiper__email:before {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
+  }
+  .team .team-swiper__slide .team-swiper__email {
+    font-size: 20px;
+    padding-left: 40px;
   }
 }
 .team .swiper-slide,

@@ -7,7 +7,7 @@
       <div class="action__inner">
         <div class="action__items">
           <div class="action__item">
-            <h2 class="action__item-title">
+            <h2 class="title action__item-title">
               <?php echo get_field('consultation__title', get_the_ID(), false); ?>
             </h2>
             <p>

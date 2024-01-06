@@ -258,6 +258,9 @@
 }
 
 @media (min-width: 767px) {
+  .our-opinion__img {
+   width:300px;
+}
   .action__items {
     justify-content: space-between;
     gap: 40px;
@@ -275,14 +278,28 @@
     font-size: 28px;
   }
 }
+.mob-nav-content {
+ min-width:0;
+ width:0;
+}
+.mob-nav-content.ui-active {
+min-width: 17rem;
+}
 @media (min-width: 1024px) {
+  .our-opinion__img {
+   width:355px;
+}
+ .mob-nav-content {
+  min-width:0;
+  width:unset;
+}
   .title.action__item-title {
     font-size: 42px;
     text-align: left;
     max-width: 850px;
     width: 100%;
   }
-
+ 	
   .action__items {
       gap: 60px;
   }
@@ -307,4 +324,7 @@
 .content-container--page {
   max-width: 1100px;
   margin: 20px auto 0;
+}
+.reviews.single {
+padding-bottom:0;
 }

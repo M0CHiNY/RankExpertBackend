@@ -2,12 +2,17 @@
   padding-bottom: calc(27.71845px + 1.94175vw);
   padding-top: 0;
 }
+.blog-inner {
+  padding-top: 15px;
+}
+
 @media (min-width: 1024px) {
   .blog-inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 25px;
+    padding-top: 30px;
   }
 }
 .blog-article {
