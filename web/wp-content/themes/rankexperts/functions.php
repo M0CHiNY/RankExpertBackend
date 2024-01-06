@@ -101,3 +101,22 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 
 // Setting the number of views
 require get_template_directory() . '/inc/views.php';
+
+function dequeue_plugin_styles()
+{
+	if (!is_single()) {
+		wp_dequeue_style('SFSImainCss');
+	}
+}
+
+add_action('wp_print_styles', 'dequeue_plugin_styles', 999);
+
+
+//custom size img
+add_action('after_setup_theme', 'custom_image_sizes');
+
+function custom_image_sizes()
+{
+  add_image_size('custom_showcase', 503, 250, true); 
+  add_image_size('custom_showcase--small', 260, 130, true); 
+}
