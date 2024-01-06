@@ -102,7 +102,7 @@
         ?>
       </div>
     </div>
-    <div class="footer__coppy">Copyright ©
+    <div class="footer__coppy"><?php pll_e('сopyright') ?? 'Copyright'; ?> ©
       <?php echo date('Y') ?> Rankexperts
     </div>
   </div>
