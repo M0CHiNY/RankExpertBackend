@@ -72,6 +72,7 @@ function rankexperts_scripts()
   }
 
   wp_enqueue_style('rankexperts-custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.0', 'all');
+ 
 }
-add_action('wp_enqueue_scripts', 'rankexperts_scripts');
+add_action('wp_enqueue_scripts', 'rankexperts_scripts', 999);
 
