@@ -23,11 +23,11 @@
               <strong><?php echo get_field('our-opinion__author', get_the_ID()); ?> /</strong>
               <?php echo get_field('our-opinion__profession', get_the_ID()); ?>
             </cite>
-            <?php $image = get_field('our-opinion__image-logo');
-            if ($image) :
+            <?php $imageLogo = get_field('our-opinion__image-logo');
+            if ($imageLogo) :
               // Image variables.
-              $url = $image['sizes']['thumbnail'];
-              $alt = $image['alt'];
+              $url = $imageLogo['sizes']['thumbnail'];
+              $alt = $imageLogo['alt'];
             ?>
               <img class="our-opinion__logo" src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" />
             <?php endif; ?>

@@ -1603,26 +1603,27 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 40px;
+  height: 35px;
   justify-content: center;
   margin-bottom: 5px;
-  width: 40px;
+  width: 35px;
 }
 
 .footer__link-item:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .footer__link-icon {
   display: block;
-  height: 40px;
+  height: 35px;
   -webkit-transition: fill 1.3s ease;
   transition: fill 1.3s ease;
-  width: 40px;
+  width: 35px;
 }
 
 .footer__link-icon svg {
-  width: 40px;
+  width: 35px;
+  height: 35px;
 }
 @media (min-width: 1024px) {
   .footer__link-icon:hover.footer__link-icon--tg svg path {
@@ -1630,6 +1631,26 @@ p {
   }
   .footer__link-icon:hover.footer__link-icon--tw svg path {
     fill: #44eb62;
+  }
+}
+
+@media (min-width: 540px) {
+  .footer__link-item:not(:last-child) {
+  margin-right: 15px;
+  }
+
+  .footer__link-item {
+    height: 40px;
+    width: 40px;
+  }
+
+  .footer__link-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .footer__link-icon svg {
+    width: 40px;
+    height: 40px;
   }
 }
 .footer__btn {

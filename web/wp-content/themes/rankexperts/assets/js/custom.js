@@ -71,19 +71,19 @@ if (prev && next) {
   setPaginationTransform(0);
 }
 
-     document.addEventListener('DOMContentLoaded', function () {
-            // Перевірка розширення екрану та орієнтації
-            function checkScreenSize() {
-                if (window.innerWidth > 1024 || window.innerHeight > window.innerWidth) {
-                    document.getElementById('mob-nav').removeAttribute('hidden');
-                } else {
-                    document.getElementById('mob-nav').setAttribute('hidden', 'true');
-                }
-            }
+document.addEventListener("DOMContentLoaded", function () {
+  // Перевірка розширення екрану та орієнтації
+  function checkScreenSize() {
+    if (window.innerWidth > 1024 || window.innerHeight > window.innerWidth) {
+      document.getElementById("mob-nav").removeAttribute("hidden");
+    } else {
+      document.getElementById("mob-nav").setAttribute("hidden", "true");
+    }
+  }
 
-            // Перевірка при завантаженні сторінки
-            checkScreenSize();
+  // Перевірка при завантаженні сторінки
+  checkScreenSize();
 
-            // Додавання слухача подій для зміни розміру вікна
-            window.addEventListener('resize', checkScreenSize);
-        });
+  // Додавання слухача подій для зміни розміру вікна
+  window.addEventListener("resize", checkScreenSize);
+});

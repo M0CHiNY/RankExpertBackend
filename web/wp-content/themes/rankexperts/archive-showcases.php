@@ -6,7 +6,6 @@
 
 get_header();
 ?>
-
 <!-- Breadcrumb from yoast plugin start-->
 <?php get_template_part('template-parts/breadcrumbs'); ?>
 <!-- Breadcrumb from yoast plugin end-->

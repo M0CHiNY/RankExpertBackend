@@ -15,9 +15,9 @@ else :
 endif;
 ?>
 
-<section class="<?php echo esc_attr($section_class); ?>">
+<section class="<?php echo esc_attr($section_class); ?> <?php echo is_singular('onlinemarketing') ? 'single' : '' ?>">
   <div class="container">
-    <h2 class="reviews__title title">Our clients trust us</h2>
+    <h2 class="reviews__title title"><?php pll_e('title-for-reviews') ?? 'Our clients trust us'; ?></h2>
     <div class="reviews__wrap">
       <?php
       if ($Reviews_query->have_posts()) :

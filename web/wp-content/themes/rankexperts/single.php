@@ -84,7 +84,7 @@ get_header();
 
 <div class="most-popular">
   <div class="container">
-    <div class="most-popular__title">The most popular</div>
+    <div class="most-popular__title"><?php pll_e('Single-page-blog') ?? 'The most popular'; ?></div>
     <div class="most-popular__items most-popular__swiper">
       <div class="swiper-wrapper">
         <?php
