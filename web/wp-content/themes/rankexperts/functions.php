@@ -55,6 +55,23 @@ function rankexperts_setup()
 	// Add theme support for selective refresh for widgets.
 	add_theme_support('customize-selective-refresh-widgets');
 
+	$rankexperts_image_sizes = array(
+		'showcases-mobile' => array(
+			'width'  => 325,
+			'height' => 162,
+			'crop'   => true,
+		),
+		'showcases-desktop' => array(
+			'width'  => 500,
+			'height' => 250,
+			'crop'   => true,
+		),
+	);
+	
+	foreach ($rankexperts_image_sizes as $name => $args) {
+		add_image_size($name, $args['width'], $args['height'], $args['crop']);
+	}
+
 }
 add_action('after_setup_theme', 'rankexperts_setup');
 
@@ -65,58 +82,50 @@ add_action('after_setup_theme', 'rankexperts_setup');
 
 require get_template_directory() . '/inc/scripts.php';
 
-// custom post
+// // custom post
 require get_template_directory() . '/inc/cpt.php';
 
 // add svg script
 require get_template_directory() . '/inc/scriptSvg.php';
 
-/**
- * Implement header menu
- */
+// /**
+//  * Implement header menu
+//  */
 require get_template_directory() . '/inc/headerWalkerMenu.php';
 
-/**
- * Implement footer menu
- */
+// /**
+//  * Implement footer menu
+//  */
 require get_template_directory() . '/inc/footerWalkerMenu.php';
 
-/**
- * Implement customizer logos
- */
+// /**
+//  * Implement customizer logos
+//  */
 require get_template_directory() . '/inc/customizer-logos.php';
 
-/**
- * Implement customizer stars
- */
+// /**
+//  * Implement customizer stars
+//  */
 require get_template_directory() . '/inc/stars.php';
-/**
- * Implement сustom translate for polylang
- */
+// /**
+//  * Implement сustom translate for polylang
+//  */
 require get_template_directory() . '/inc/сustom-translate.php';
 
-//remove <br> for contact form 7
+// //remove <br> for contact form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 
-// Setting the number of views
+// // // Setting the number of views
 require get_template_directory() . '/inc/views.php';
 
-function dequeue_plugin_styles()
-{
-	if (!is_single()) {
-		wp_dequeue_style('SFSImainCss');
-	}
+function dequeue_plugin_styles() {
+    if (function_exists('is_plugin_active') && is_plugin_active('ultimate-social-media-icons/ultimate_social_media_icons.php')) {
+        if (!is_single()) {
+            wp_dequeue_style('SFSImainCss');
+        }
+    }
 }
 
-add_action('wp_print_styles', 'dequeue_plugin_styles', 999);
+add_action('wp_enqueue_scripts', 'dequeue_plugin_styles', 999);
 
-
-//custom size img
-add_action('after_setup_theme', 'custom_image_sizes');
-
-function custom_image_sizes()
-{
-  add_image_size('custom_showcase', 503, 250, true); 
-  add_image_size('custom_showcase--small', 260, 130, true); 
-}

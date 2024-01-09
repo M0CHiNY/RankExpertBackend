@@ -4,10 +4,10 @@
  
 ?>
     <div class="contact__email-box">
-      <h4 class="contact__caption">
+      <h3 class="contact__caption">
         <?php
         echo get_field('ours-email__title', 'option'); ?>
-      </h4>
+      </h3>
       <ul class="contact__list">
         <?php
         if (have_rows('ours-emails', 'option')) :

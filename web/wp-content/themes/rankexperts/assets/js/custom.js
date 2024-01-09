@@ -87,3 +87,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Додавання слухача подій для зміни розміру вікна
   window.addEventListener("resize", checkScreenSize);
 });
+

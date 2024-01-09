@@ -2,7 +2,7 @@
 $postArgsTeam = [
     'post_type' => 'persons',
     'posts_per_page' => -1,
-    'order'=> 'ASC'
+    'order' => 'ASC'
 ];
 
 $team_query = new WP_Query($postArgsTeam);
@@ -32,27 +32,39 @@ $team_query = new WP_Query($postArgsTeam);
                                 $image_attachment_id = attachment_url_to_postid($image_url);
                                 $image_alt = get_post_meta($image_attachment_id, '_wp_attachment_image_alt', true);
                                 ?>
-
                                 <div class="swiper-slide">
                                     <div class="team-swiper__slide">
-                                        <?php if (!empty($image_url)): ?>
-                                            <img class="team-swiper__img" src="<?php echo $image_url; ?>"
-                                                alt="<?php echo $image_alt; ?>" />
-                                        <?php endif; ?>
-                                        <div class="team-swiper__specialization">
-                                            <?php the_title(); ?>
+                                        <div class="team-swiper__box">
+                                            <?php if (!empty($image_url)): ?>
+                                                <picture>
+                                                    <source media="(min-width:767px)" srcset="<?php echo $image_url; ?>">
+                                                    <img loading="lazy" class="team-swiper__img" src="<?php echo $image_url; ?>" width="325"
+                                                        height="290" alt="<?php echo $image_alt; ?>" />
+                                                </picture>
+
+                                            <?php endif; ?>
+                                            <div class="team-swiper__items">
+                                                <div class="team-swiper__item">
+                                                    <div class="team-swiper__specialization">
+                                                        <?php the_title(); ?>
+                                                    </div>
+                                                    <div class="team-swiper__name">
+                                                        <?php echo get_field('person__position', get_the_ID()) ?>
+                                                    </div>
+
+                                                    <div class="team-swiper__about">
+                                                        <?php echo get_field('person__description', get_the_ID()) ?>
+                                                    </div>
+                                                </div>
+                                                <div class="team-swiper__item">
+                                                    <?php if (!empty($email = get_field('person__email', get_the_ID()))): ?>
+                                                        <a class="team-swiper__email" href="mailto:<?php echo $email; ?>">
+                                                            <?php echo $email; ?>
+                                                        </a>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="team-swiper__name">
-                                            <?php echo get_field('person__position', get_the_ID()) ?>
-                                        </div>
-                                        <div class="team-swiper__about">
-                                            <?php echo get_field('person__description', get_the_ID()) ?>
-                                        </div>
-                                        <?php if (!empty($email = get_field('person__email', get_the_ID()))): ?>
-                                            <a class="team-swiper__email" href="mailto:<?php echo $email; ?>">
-                                                <?php echo $email; ?>
-                                            </a>
-                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <?php

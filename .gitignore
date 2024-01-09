@@ -10,3 +10,4 @@ web/wp-content/themes/*
 !web/wp-content/themes/rankexperts/
 # Exclude auth.json from Git repo
 auth.json
+composer.lock

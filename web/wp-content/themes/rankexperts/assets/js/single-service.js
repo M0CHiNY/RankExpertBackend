@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //колір тексту
   const items = document.querySelectorAll(".service-steps__item");
-  let lastColor = "#888"; // Початковий колір при верхньому положенні
+  let lastColor = "#555555"; // Початковий колір при верхньому положенні
 
   function changeColorOnScroll() {
     items.forEach((item) => {

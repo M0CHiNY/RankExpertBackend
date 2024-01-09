@@ -38,7 +38,7 @@ get_header();
     </div>
     <div class="content-container__wrapper">
       <div class="content-container">
-          <h1><?php the_title(); ?></h1>
+        <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
         <ul class="list-tags">
           <?php
@@ -51,19 +51,19 @@ get_header();
           ?>
         </ul>
         <div class="content-box">
-          <div class="content-view"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <div class="content-view">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
               <path d="M12.5 3.90625C20.3125 3.90625 25 12.5 25 12.5C25 12.5 20.3125 21.0938 12.5 21.0938C4.6875 21.0938 0 12.5 0 12.5C0 12.5 4.6875 3.90625 12.5 3.90625ZM12.5 5.46875C7 5.46875 3.12188 10.5484 1.83594 12.5C3.12031 14.45 6.99844 19.5312 12.5 19.5312C18 19.5312 21.8781 14.4516 23.1641 12.5C21.8797 10.55 18.0016 5.46875 12.5 5.46875ZM12.5 7.03125C13.9504 7.03125 15.3414 7.60742 16.367 8.63301C17.3926 9.6586 17.9688 11.0496 17.9688 12.5C17.9688 13.9504 17.3926 15.3414 16.367 16.367C15.3414 17.3926 13.9504 17.9688 12.5 17.9688C11.0496 17.9688 9.6586 17.3926 8.63301 16.367C7.60742 15.3414 7.03125 13.9504 7.03125 12.5C7.03125 11.0496 7.60742 9.6586 8.63301 8.63301C9.6586 7.60742 11.0496 7.03125 12.5 7.03125ZM12.5 8.59375C11.4644 8.59499 10.4715 9.00694 9.73923 9.73923C9.00694 10.4715 8.59499 11.4644 8.59375 12.5C8.59375 14.6531 10.3453 16.4062 12.5 16.4062C14.6547 16.4062 16.4062 14.6531 16.4062 12.5C16.4062 10.3469 14.6547 8.59375 12.5 8.59375Z" fill="#8F8F8E" />
             </svg>
             <div class="post-views">
-              <?php
-              $post_id = get_the_ID();
-              $views = get_post_meta($post_id, 'post_views', true);
-              $views++;
-              update_post_meta($post_id, 'post_views', $views);
-              ?>
-              <div class="post-views"><span>View:</span><?php echo $views; ?> </div>
+              <div class="post-views"><span>View:</span>
+                <?php
+                $custom_count = get_post_meta(get_the_ID(), 'wpb_post_views_count', true);
+                $count = function_name_given(get_the_ID());
+                echo !empty($custom_count) ? intval($custom_count) : $count;
+                ?>
+              </div>
             </div>
-
           </div>
 
           <div class="content-share">
@@ -166,8 +166,6 @@ get_header();
   </div>
 </div>
 
-
-
 <?php
-
 get_footer();
+?>

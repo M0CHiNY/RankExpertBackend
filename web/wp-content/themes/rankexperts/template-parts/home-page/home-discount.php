@@ -28,9 +28,9 @@
                                             </svg>
                                         </div>
                                         <?php if (!empty($card->post_title)): ?>
-                                            <h4 class="card-item__caption">
+                                            <h3 class="card-item__caption">
                                                 <?php echo $card->post_title; ?>
-                                            </h4>
+                                            </h3>
                                         <?php endif; ?>
                                     </div>
                                     <?php if (!empty(get_field('add_discount', $card->ID))): ?>
