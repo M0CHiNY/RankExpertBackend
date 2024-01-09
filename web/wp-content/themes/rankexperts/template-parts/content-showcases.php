@@ -17,11 +17,16 @@ if ($custom_query->have_posts()) :
       <?php
       // Check if the post has a featured image
       if (has_post_thumbnail()) :
-        // Get the URL of the featured image
-        $image_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
-        $alt = get_post_meta(get_post_thumbnail_id(get_the_ID()), '_wp_attachment_image_alt', true);
+        $image_id = get_post_thumbnail_id();
+        $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+        $image_data = wp_get_attachment_image_src($image_id, 'medium');
+        if ($image_id && $image_data) {
+          echo '<picture>';
+          echo '<source srcset="' . $image_data[0] . '" media="(min-width: 768px)">';
+          echo '<img loading="lazy" class="showcase-item__img" src="' . $image_data[0] . '" width="' . $image_data[1] . '" height="' . $image_data[2] . '" alt="' . $alt . '">';
+          echo '</picture>';
+        }
       ?>
-        <img class="showcase-item__img" src="<?php echo esc_url($image_url); ?>" alt="<?php echo $alt ?>" />
       <?php else : ?>
         <img class="showcase-item__img" src="<?php echo get_template_directory_uri() . '/images-custom/no-image-showcase.webp'; ?>" alt="no image" />
       <?php endif; ?>
@@ -31,7 +36,7 @@ if ($custom_query->have_posts()) :
         <?php the_title(); ?>
       </div>
       <div class="showcase-itembox">
-        <div class="showcase-item__date">
+        <div class="showcase-item__date <?php echo is_archive() ? 'color' : ''; ?>">
           <?php echo get_the_date('j F Y'); ?>
         </div>
         <a class="showcase-item-btn" href="<?php the_permalink(); ?>">
@@ -55,21 +60,32 @@ endif;
     <div class="container">
       <div class="pagination__items">
         <?php
-        echo paginate_links(array(
-          'total' => $custom_query->max_num_pages,
-          'current' => max(1, get_query_var('paged')),
-          'format' => 'page/%#%',
-          'show_all' => false,
-          'end_size' => 1,
-          'mid_size' => 2,
-          'prev_next' => true,
-          'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M25.6042 18.1459L20.2083 23.5417C20.0152 23.7344 19.862 23.9634 19.7574 24.2154C19.6529 24.4674 19.5991 24.7376 19.5991 25.0104C19.5991 25.2833 19.6529 25.5535 19.7574 25.8055C19.862 26.0575 20.0152 26.2865 20.2083 26.4792L25.6042 31.875C26.9167 33.1875 29.1667 32.25 29.1667 30.3959V19.6042C29.1667 17.75 26.9167 16.8334 25.6042 18.1459Z" fill="#201F1D"/></svg>',
-          'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M24.3958 18.1459L29.7917 23.5417C29.9848 23.7344 30.138 23.9634 30.2426 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2426 25.8055C30.138 26.0575 29.9848 26.2865 29.7917 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D"></path></svg>',
-          'add_args' => true,
-          'add_fragment' => '',
-          'before_page_number' => '<div class="pagination__item">',
-          'after_page_number' => '</div>',
-        ));
+        $pagination_links = paginate_links(
+          array(
+            'total' => $custom_query->max_num_pages,
+            'current' => max(1, get_query_var('paged')),
+            'format' => 'page/%#%',
+            'show_all' => false,
+            'end_size' => 1,
+            'mid_size' => 2,
+            'prev_next' => true,
+            'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M25.6042 18.1459L20.2083 23.5417C20.0152 23.7344 19.862 23.9634 19.7574 24.2154C19.6529 24.4674 19.5991 24.7376 19.5991 25.0104C19.5991 25.2833 19.6529 25.5535 19.7574 25.8055C19.862 26.0575 20.0152 26.2865 20.2083 26.4792L25.6042 31.875C26.9167 33.1875 29.1667 32.25 29.1667 30.3959V19.6042C29.1667 17.75 26.9167 16.8334 25.6042 18.1459Z" fill="#201F1D"/></svg>',
+            'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M24.3958 18.1459L29.7917 23.5417C29.9848 23.7344 30.138 23.9634 30.2426 24.2154C30.3471 24.4674 30.4009 24.7376 30.4009 25.0104C30.4009 25.2833 30.3471 25.5535 30.2426 25.8055C30.138 26.0575 29.9848 26.2865 29.7917 26.4792L24.3958 31.875C23.0833 33.1875 20.8333 32.25 20.8333 30.3959V19.6042C20.8333 17.75 23.0833 16.8334 24.3958 18.1459Z" fill="#201F1D"></path></svg>',
+            'add_args' => true,
+            'add_fragment' => '',
+            'before_page_number' => '<div class="pagination__item">',
+            'after_page_number' => '</div>',
+          )
+        );
+
+        // Add aria-label for btn Next and Previous
+        $pagination_links = str_replace(
+          array('<a class="prev page-numbers"', '<a class="next page-numbers"'),
+          array('<a class="prev page-numbers" aria-label="Previous"', '<a class="next page-numbers" aria-label="Next"'),
+          $pagination_links
+        );
+
+        echo $pagination_links;
 
         wp_reset_postdata();
         ?>

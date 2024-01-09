@@ -13,7 +13,7 @@
         $url = $image['sizes']['medium_large'];
         $alt = $image['alt'];
       ?>
-        <img class="modal-form__img" src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" />
+        <img loading="lazy" class="modal-form__img" src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" width="380" height="200"/>
       <?php endif; ?>
       <div class="modal-form__for-con7">
         <?php echo do_shortcode(get_field('contacs-form__do_shortcode', 'option')); ?>

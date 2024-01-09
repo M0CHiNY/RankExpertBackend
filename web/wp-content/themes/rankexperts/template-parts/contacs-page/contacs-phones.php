@@ -3,9 +3,9 @@
   if (get_field('contacts__title-phone', 'option')) : 
 ?>
   <div class="contact__phone-box">
-    <h4 class="contact__caption">
+    <h3 class="contact__caption">
       <?php echo get_field('contacts__title-phone', 'option'); ?>
-    </h4>
+    </h3>
     <ul class="contact__list">
       <?php
       if (have_rows('contacts__numbers', 'option')) :

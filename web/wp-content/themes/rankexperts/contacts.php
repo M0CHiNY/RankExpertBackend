@@ -21,7 +21,7 @@ get_header();
           <div class="contact__info">
             <div class="contact__inner-head">
               <h1 class="contact__title title"><?php echo get_field('contacts__title', get_the_ID()); ?></h1>
-              <h3 class="contact__subtitle"><?php echo get_field('contacts__subtitle', get_the_ID()); ?></h3>
+              <h2 class="contact__subtitle"><?php echo get_field('contacts__subtitle', get_the_ID()); ?></h2>
             </div>
             <div class="contact__inner-address">
               <!-- block phones start -->

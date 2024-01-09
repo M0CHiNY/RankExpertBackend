@@ -35,7 +35,7 @@
                 $category_slugs = wp_list_pluck($terms, 'slug');
                 $postServicesArgs = array(
                   'post_type' => 'onlinemarketing',
-                  'posts_per_page' => -3,
+                  'posts_per_page' => -1,
                   'order'=> 'ASC',
                   'tax_query' => array(
                     array(
@@ -58,9 +58,9 @@
                             <div class="card-item__img">
                               <?php echo get_field('svg_icon', get_the_ID()) ?>
                             </div>
-                            <h4 class="card-item__caption">
+                            <h3 class="card-item__caption">
                               <?php the_title(); ?>
-                            </h4>
+                            </h3>
                           </div>
                           <!-- Discount-->
                           <!-- <div class="card-item__discount">

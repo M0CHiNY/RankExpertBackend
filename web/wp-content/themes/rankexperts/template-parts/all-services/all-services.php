@@ -36,7 +36,7 @@
               $category_slugs = wp_list_pluck($terms, 'slug');
               $postServicesArgs = array(
                 'post_type' => 'onlinemarketing',
-                'posts_per_page' => -3,
+                'posts_per_page' => -1,
                 'order' => 'ASC',
                 'tax_query' => array(
                   array(

@@ -30,8 +30,8 @@
 
         <div class="logo-box">
           <?php if ($footer_logo) : ?>
-            <a href="<?php echo home_url(); ?>" class="footer__logo">
-              <img class="footer__logo-img" src="<?php echo esc_url($footer_logo); ?>" alt="<?php echo esc_attr($footer_logo_alt) ?>">
+            <a href="<?php echo home_url(); ?>" class="footer__logo" aria-label="Rankexperts footer logo">
+              <img loading="lazy" class=" footer__logo-img" src="<?php echo esc_url($footer_logo); ?>" alt="<?php echo esc_attr($footer_logo_alt) ?>" width="185" height="85">
             </a>
           <?php endif; ?>
         </div>
@@ -74,7 +74,7 @@
                   foreach ($socials as $index => $social) :
                 ?>
                     <li class="footer__link-item">
-                      <a class="footer__link-icon" href="<?php echo esc_url($social['footer__social-link']); ?>">
+                      <a href="<?php echo esc_url($social['footer__social-link']); ?>" class="footer__link-icon" aria-label="our social networks">
                         <?php echo $social['footer__social-icon']; ?>
                       </a>
                     </li>
@@ -91,9 +91,9 @@
 
               </ul>
               <?php if (get_field('button__footer', 'options')) : ?>
-              <button class="footer__btn btn" type="button" data-ui-toggle="my-dialog">
-                <?php echo get_field('button__footer', 'option'); ?>
-              </button>
+                <button class="footer__btn btn" type="button" data-ui-toggle="my-dialog">
+                  <?php echo get_field('button__footer', 'option'); ?>
+                </button>
               <?php endif; ?>
             </div>
         <?php
